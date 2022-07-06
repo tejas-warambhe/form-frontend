@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import NextKinTable from "./Additional Components/NextKinTable";
+
 
 const NextofKeens = ({ inputs, setInputs }) => {
     
@@ -64,20 +64,69 @@ const NextofKeens = ({ inputs, setInputs }) => {
                 </div>
 
                 <div class="mt-4">
-                    {arr.map((ele, index) => {
-                        return (<NextKinTable uid={ele}/>) 
-                    })}
+                <table
+                    class="table table-bordered table-hover "
+                    id="tab_logic"
+                  >
+                    <thead>
+                      <tr class="table-info">
+                        {/* <th class="text-center">Sr.no</th> */}
+                        <th class="text-center">Name</th>
+                        <th class="text-center">Relationship</th>
+                        <th class="text-center">Date of Birth</th>
+                        <th class="text-center">PP No./ Other Id</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr id="addr0" class="">
+                        {/* <td>1</td> */}
+                        <td>
+                          <input
+                            type="text"
+                            name="name0"
+                            placeholder="Name"
+                            class="form-control"
+                          />
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            name="relation0"
+                            placeholder="Relationship"
+                            class="form-control"
+                          />
+                        </td>
+                        <td>
+                          <input type="date" name="dob0" class="form-control" />
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            name="ppno0"
+                            placeholder="PP No."
+                            class="form-control"
+                          />
+                        </td>
+                      </tr>
+                      <tr id="addr1"></tr>
+                    </tbody>
+                  </table>
                   
                 </div>
-                <div class="d-flex justify-content-between my-4">
-                  <a id="delete_row" class="pull-left btn btn-primary" onClick={decrementArr}>
+                <div class="d-flex justify-content-center my-4">
+                  {/* <a id="delete_row" class="pull-left btn btn-primary" onClick={decrementArr}>
                     Delete Row
-                  </a>
+                  </a> */}
                   <a id="add_row" class="btn btn-primary pull-right" onClick={incrementArr}>
-                    Add Row
+                    Submit
                   </a>
                 </div>
                 <hr />
+
+                <div>
+                  
+                </div>
 
                 <div class="d-flex justify-content-between">
                   <a
