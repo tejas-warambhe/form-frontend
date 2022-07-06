@@ -1,9 +1,12 @@
-import React from 'react'
+import React,{useState} from 'react'
+import TextField from '@mui/material/TextField';
+import Stack from '@mui/material/Stack';
 
 const ProfileDetails = () => {
+
     return (
     <div>
-            <div class="tab-content col-md-10" id="v-pills-tabContent">
+            <div class="tab-content col-md-12" id="v-pills-tabContent">
                 <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                     <form>
                         <div class="rounded-3 shadow">
@@ -33,12 +36,33 @@ const ProfileDetails = () => {
 
                                                 <div class="form-group col-md-3 input-padding">
                                                     <label for="inputname">Date Of Application</label>
-                                                    <input />
+                                                    {/* <input /> */}
+                                                    <Stack component="form" noValidate spacing={1} style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+                                                        <TextField
+                                                            id="date"
+                                                            type="date"
+                                                            defaultValue="2017-05-24"
+                                                            sx={{ width:"100%" }}
+                                                            InputLabelProps={{
+                                                            shrink: true,
+                                                            }}
+                                                        />
+                                                    </Stack>
                                                 </div>
 
                                                 <div class="form-group col-md-3 input-padding">
                                                     <label for="inputname">Date Of Availability</label>
-                                                    <input />
+                                                    <Stack component="form" noValidate spacing={1} style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+                                                        <TextField
+                                                            id="date"
+                                                            type="date"
+                                                            defaultValue="2017-05-24"
+                                                            sx={{ width:"100%" }}
+                                                            InputLabelProps={{
+                                                            shrink: true,
+                                                            }}
+                                                        />
+                                                    </Stack>
                                                 </div>
 
                                                 <div class="form-group col-md-3 input-padding">
@@ -79,7 +103,17 @@ const ProfileDetails = () => {
 
                                             <div class="form-group col-md-4 input-padding">
                                                 <label for="dob">Date of birth</label>
-                                                <input />
+                                                <Stack component="form" noValidate spacing={1} style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+                                                        <TextField
+                                                            id="date"
+                                                            type="date"
+                                                            defaultValue="2017-05-24"
+                                                            sx={{ width:"100%" }}
+                                                            InputLabelProps={{
+                                                            shrink: true,
+                                                            }}
+                                                        />
+                                                </Stack>
                                             </div>
 
                                             <div class="form-group col-md-4 input-padding">

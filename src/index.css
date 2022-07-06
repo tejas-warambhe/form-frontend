@@ -25,9 +25,13 @@ input {
   min-height: auto!important;
   padding-top: 10px 4px!important;
   height: 40px;
+  width: 100%;
   transition: all .1s linear!important;
   border: 1px solid rgba(18, 18, 18, 0.109)!important;
   border-bottom: 2px solid rgba(199, 199, 199, 0.599)!important;
+}
+.MuiOutlinedInput-input{
+  padding: 8px !important;
 }
 
 .navbar {
