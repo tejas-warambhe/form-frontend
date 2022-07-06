@@ -25,7 +25,7 @@ input {
   min-height: auto!important;
   padding-top: 10px 4px!important;
   height: 40px;
-  width: 100%;
+  width: 100% !important;
   transition: all .1s linear!important;
   border: 1px solid rgba(18, 18, 18, 0.109)!important;
   border-bottom: 2px solid rgba(199, 199, 199, 0.599)!important;
@@ -132,6 +132,7 @@ input {
 
 .form-heading {
   margin: 10px 0 20px 10px;
+  color: black;
 }
 
 .input-box {
@@ -315,4 +316,7 @@ input[type="file" i]::-webkit-file-upload-button {
   -webkit-box-shadow: -1px 7px 9px -7px rgba(143, 143, 143, 0.74);
   -moz-box-shadow: -1px 7px 9px -7px rgba(143, 143, 143, 0.74);
   box-shadow: -1px 7px 9px -7px rgba(143, 143, 143, 0.74);
+}
+.newbtn{
+  width: 100%;
 }

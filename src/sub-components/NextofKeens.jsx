@@ -2,8 +2,8 @@ import React from 'react'
 
 const NextofKeens = () => {
   return (
-    <div>
-        <div class="tab-pane fade" id="dependents" role="tabpanel" aria-labelledby="dependents-tab">
+    <div style={{width:"100%"}}>
+        <div >
                     <form class="rounded-3 shadow">
 
                         <div class="display form-heading">
@@ -18,18 +18,21 @@ const NextofKeens = () => {
 
                                         <div class="form-group col-md-3 input-padding">
                                             <label for="inputname">Name</label>
+                                            <input/>
 
                                         </div>
 
                                         <div class="form-group col-md-3 input-padding">
 
                                             <label for="inputname">Relation</label>
+                                            <input/>
                                         </div>
 
 
 
                                         <div class="form-group col-md-3 input-padding">
-                                            <label for="inputname">Address</label>
+                                            <label for="inputname">Add NKD</label>
+                                            <input/>
                                         </div>
 
 
