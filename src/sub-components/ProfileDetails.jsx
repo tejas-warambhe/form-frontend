@@ -3,7 +3,7 @@ import React from 'react'
 const ProfileDetails = () => {
     return (
     <div>
-            <div class="tab-content col-md-10 m-3" id="v-pills-tabContent">
+            <div class="tab-content col-md-10" id="v-pills-tabContent">
                 <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                     <form>
                         <div class="rounded-3 shadow">
