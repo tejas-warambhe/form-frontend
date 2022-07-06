@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import ProfileDetails from "./sub-components/ProfileDetails";
-
+import NextofKeens from "./sub-components/NextofKeens";
 
 function App() {
 
@@ -21,8 +21,8 @@ function App() {
             <div className="d-flex ms-3 py-3 flex-row-reverse">
                 <div className="aside-tabs">
                     <div className="nav flex-column nav-pills m-3 aside-tabs-scrolled" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <Link to={'/profileDetails'}><button className="nav-link active" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="true" >Profile Details</button></Link>
-                        <Link to={'/profileDetails'}><button className="nav-link" id="dependents-tab" data-bs-toggle="pill" data-bs-target="#dependents" type="button" role="tab" aria-controls="dependents" aria-selected="false" onclick="topFunction()">Next of kin /
+                        <Link to={'/'}><button className="nav-link active" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="true" >Profile Details</button></Link>
+                        <Link to={'/dependents'}><button className="nav-link" id="dependents-tab" data-bs-toggle="pill" data-bs-target="#dependents" type="button" role="tab" aria-controls="dependents" aria-selected="false" onclick="topFunction()">Next of kin /
                             Dependents</button></Link>
                         <button className="nav-link" id="passport-tab" data-bs-toggle="pill" data-bs-target="#passport" type="button" role="tab" aria-controls="passport" aria-selected="false" onclick="topFunction()">Passport details</button>
                         <button className="nav-link" id="seamen-tab" data-bs-toggle="pill" data-bs-target="#seamen" type="button" role="tab" aria-controls="seamen" aria-selected="false" onclick="topFunction()">Continuous Discharge Certificate / Seamen
@@ -50,6 +50,7 @@ function App() {
 
                   <Routes>
                     <Route exact path="/" element={<ProfileDetails/>} />
+                    <Route exact path="/dependents" element={<NextofKeens/>} />
                   </Routes>
         
             </div>
