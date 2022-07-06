@@ -273,8 +273,9 @@ table>:not(caption)>*>* {
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-  background: #2e9895!important;
+  background: #2e9895;
   box-shadow: none;
+  width: 90%;
 }
 
 .shadow {
