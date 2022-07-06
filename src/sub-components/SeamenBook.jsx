@@ -36,16 +36,16 @@ const SeamenBook = () => {
                                                 INDIAN
                                             </th>
                                             <td>
-                                                
+                                                <input/>
                                             </td>
                                             <td>
-                                                
+                                            <input/>
                                             </td>
                                             <td>
-                                                
+                                            <input type="date"/>
                                             </td>
                                             <td>
-
+                                            <input type="date"/>
                                             </td>
                                         </tr>
                                         
@@ -54,16 +54,16 @@ const SeamenBook = () => {
                                                 PANAMA
                                             </th>
                                             <td>
-                                              
+                                            <input/>
                                             </td>
                                             <td>
-                                               
+                                            <input/>
                                             </td>
                                             <td>
-                                                
+                                            <input type="date"/>
                                             </td>
                                             <td>
-
+                                            <input type="date"/>
                                             </td>
                                         </tr>
                                         <tr>
@@ -71,17 +71,17 @@ const SeamenBook = () => {
                                                 OTHERS
                                             </th>
                                             <td>
+                                            <input/>
+                                            </td>
+                                            <td>
+                                            <input/>
+                                            </td>
+                                            <td>
+                                            <input type="date"/>
+                                            </td>
+                                            <td>
 
-                                            </td>
-                                            <td>
-                                                
-                                            </td>
-                                            <td>
-                                     
-                                            </td>
-                                            <td>
-
-                                               
+                                            <input type="date"/>
                                             </td>
                                         </tr>
                                         <tr id='addr1'></tr>

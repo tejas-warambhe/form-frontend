@@ -39,13 +39,13 @@ const StcwOtherCertificates = () => {
                                                 AFF (Fire Fighting)
                                             </th>
                                             <td>
-                                               <input/>
+                                               <input />
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -66,10 +66,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/></td>
@@ -85,10 +85,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -102,13 +102,13 @@ const StcwOtherCertificates = () => {
                                                 MFA / MEDICARE
                                             </th>
                                             <td>
-                                            <input/>
+                                            <input />
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -125,10 +125,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -145,10 +145,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -165,10 +165,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -185,10 +185,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -205,10 +205,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -225,10 +225,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -245,10 +245,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -265,10 +265,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -285,10 +285,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -305,10 +305,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -325,10 +325,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -345,10 +345,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -365,10 +365,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -382,14 +382,19 @@ const StcwOtherCertificates = () => {
                                                 SIMULATOR TRAINING
                                             </th>
                                             <td>
+                                            <input/>
                                             </td>
                                             <td>
+                                            <input type="date"/>
                                             </td>
                                             <td>
+                                            <input type="date"/>
                                             </td>
                                             <td>
+                                            <input/>
                                             </td>
                                             <td>
+                                            <input/>
                                             </td>
                                         </tr>
                                         <tr id='addx2'>
@@ -400,10 +405,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -420,10 +425,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -440,10 +445,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -460,10 +465,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -480,10 +485,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -500,10 +505,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -520,10 +525,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -540,10 +545,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -560,10 +565,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -581,7 +586,7 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                                 <input type="date" name='dae' pattern=" " class="form-control" />
@@ -598,14 +603,19 @@ const StcwOtherCertificates = () => {
                                                 TANKER COURSES
                                             </th>
                                             <td>
+                                            <input/>
                                             </td>
                                             <td>
+                                            <input type="date"/>
                                             </td>
                                             <td>
+                                            <input type="date"/>
                                             </td>
                                             <td>
+                                            <input/>
                                             </td>
                                             <td>
+                                            <input/>
                                             </td>
                                         </tr>
                                         <tr>
@@ -616,10 +626,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -636,10 +646,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -656,10 +666,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -676,10 +686,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -696,10 +706,10 @@ const StcwOtherCertificates = () => {
                                             <input/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                            <input/>
+                                            <input type="date"/>
                                             </td>
                                             <td>
                                             <input/>
@@ -713,19 +723,19 @@ const StcwOtherCertificates = () => {
                                                 DCE GAS
                                             </th>
                                             <td>
-                                               
+                                            <input/>
                                             </td>
                                             <td>
-                                              
+                                            <input type="date"/>  
                                             </td>
                                             <td>
-                                               
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                                
+                                                <input/>
                                             </td>
                                             <td>
-                                               
+                                            <input/>          
                                             </td>
                                         </tr>
                                         <tr>
@@ -733,19 +743,19 @@ const StcwOtherCertificates = () => {
                                                 LIQUID CARGO & BALLAST
                                             </th>
                                             <td>
-                                               
+                                            <input/>
                                             </td>
                                             <td>
-                                                
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                                
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                               
+                                            <input/>
                                             </td>
                                             <td>
-                                               
+                                            <input/>
                                             </td>
                                         </tr>
                                         <tr>
@@ -753,14 +763,19 @@ const StcwOtherCertificates = () => {
                                                 OTHER COURSES
                                             </th>
                                             <td>
+                                            <input/>
                                             </td>
                                             <td>
+                                            <input type="date"/>
                                             </td>
                                             <td>
+                                            <input type="date"/>
                                             </td>
                                             <td>
+                                            <input/>
                                             </td>
                                             <td>
+                                            <input/>
                                             </td>
                                         </tr>
                                         <tr>
@@ -768,19 +783,20 @@ const StcwOtherCertificates = () => {
                                                 MARITIME ENGLISH
                                             </th>
                                             <td>
-                                                
+                                            <input/>
                                             </td>
                                             <td>
-                                                
+                                            <input type="date"/>
+                                            </td>
+
+                                            <td>
+                                            <input type="date"/>    
                                             </td>
                                             <td>
-                                                
+                                            <input/>
                                             </td>
                                             <td>
-                                                
-                                            </td>
-                                            <td>
-                                                
+                                            <input/>
                                             </td>
                                         </tr>
                                         <tr>
@@ -788,19 +804,19 @@ const StcwOtherCertificates = () => {
                                                 SHIP HANDLING & MANOEUVRING
                                             </th>
                                             <td>
-                                               
+                                            <input/>
                                             </td>
                                             <td>
-                                                
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                               
+                                            <input type="date"/>
                                             </td>
                                             <td>
-                                               
+                                            <input/>
                                             </td>
                                             <td>
-                                               
+                                            <input/>
                                             </td>
                                         </tr>
 

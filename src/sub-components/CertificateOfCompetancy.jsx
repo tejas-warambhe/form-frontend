@@ -42,17 +42,22 @@ const CertificateOfCompetancy = () => {
                                                 INDIAN
                                             </th>
                                             <td>
-                                                
+                                            <input/>
                                             </td>
                                             <td>
+                                            <input/>
                                             </td>
                                             <td>
+                                            <input type="date"/>
                                             </td>
                                             <td>
+                                            <input type="date"/>
                                             </td>
                                             <td>
+                                            <input type="date"/>
                                             </td>
                                             <td>
+                                            <input/>
                                             </td>
                                             
                                             
@@ -62,17 +67,22 @@ const CertificateOfCompetancy = () => {
                                                 UK
                                             </th>
                                             <td>
-                                               
+                                            <input/>
                                             </td>
                                             <td>
+                                            <input/>
                                                 </td>
                                             <td>
+                                            <input type="date"/>
                                                 </td>
                                             <td>
+                                            <input type="date"/>
                                                </td>
                                             <td>
+                                            <input type="date"/>
                                                 </td>
                                             <td>
+                                            <input/>
                                                 </td>
                                             
                                         </tr>
@@ -82,21 +92,27 @@ const CertificateOfCompetancy = () => {
                                                 AUS
                                             </th>
                                             <td>
-                                                
+                                            <input/>
                                             </td>
                                             <td>
+                                            <input/>
                                                 </td>
+                                                
                                                 <td>
+                                                <input type="date"/>
                                             </td>
                                             
                                           
                                             <td>
+                                            <input type="date"/>
                                                 </td>
                                            
                                             <td>
+                                            <input type="date"/>
                                                </td>
                                             
                                             <td>
+                                            <input/>
                                                 </td>
                                             
                                         </tr>
@@ -105,17 +121,22 @@ const CertificateOfCompetancy = () => {
                                                 SINGAPORE
                                             </th>
                                             <td>
-                                                
+                                            <input/>
                                             </td>
                                             <td>
+                                            <input/>
                                                 </td>
                                             <td>
+                                            <input type="date"/>
                                                  </td>
                                             <td>
+                                            <input type="date"/>
                                                 </td>
                                             <td>
+                                            <input type="date"/>
                                                 </td>
                                             <td>
+                                            <input/>
                                                 </td>
                                            
                                         </tr>
@@ -124,21 +145,27 @@ const CertificateOfCompetancy = () => {
                                                 PANAMA
                                             </th>
                                             <td>
+                                            <input/>
                                                  </td>
                                            
                                             <td>
+                                            <input/>
                                                  </td>
                                             
                                             <td>
+                                            <input type="date"/>
                                                 </td>
                                             
                                             <td>
+                                            <input type="date"/>
                                                 </td>
                                             
                                             <td>
+                                            <input type="date"/>
                                                 </td>
                                             
                                             <td>
+                                            <input/>
                                                </td>
                                             
                                         </tr>
@@ -147,21 +174,27 @@ const CertificateOfCompetancy = () => {
                                                 OTHERS
                                             </th>
                                             <td>
+                                            <input/>
                                                </td>
                                             
                                             <td>
+                                            <input/>
                                                  </td>
                                           
                                             <td>
+                                            <input type="date"/>
                                                  </td>
                                             
                                             <td>
+                                            <input type="date"/>
                                                </td>
                                            
                                             <td>
+                                            <input type="date"/>
                                                  </td>
                                           
                                             <td>
+                                            <input/>
                                                  </td>
                                          
                                         </tr>

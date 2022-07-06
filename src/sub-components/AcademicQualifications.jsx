@@ -36,16 +36,16 @@ const AcademicQualifications = () => {
                                                 ELEMENTATY
                                             </th>
                                             <td>
-                                               
+                                            <input/>
                                             </td>
                                             <td>
-                                                
+                                            <input/>
                                             </td>
                                             <td>
-                                                
+                                            <input/>
                                             </td>
                                             <td>
-                                                
+                                            <input/>
                                             </td>
                                         </tr>
                                         <tr>
@@ -53,16 +53,16 @@ const AcademicQualifications = () => {
                                                 SECONDARY
                                             </th>
                                             <td>
-                                                
+                                            <input/>
                                             </td>
                                             <td>
-                                                
+                                            <input/>
                                             </td>
                                             <td>
-                                                
+                                            <input/>
                                             </td>
                                             <td>
-                                                
+                                            <input/>
                                             </td>
                                         </tr>
                                         <tr>
@@ -70,16 +70,16 @@ const AcademicQualifications = () => {
                                                 UNIVERSITY
                                             </th>
                                             <td>
-                                                
+                                            <input/>
                                             </td>
                                             <td>
-                                                
+                                            <input/>  
                                             </td>
                                             <td>
-                                                
+                                            <input/>
                                             </td>
                                             <td>
-                                                
+                                            <input/> 
                                             </td>
                                         </tr>
                                         <tr>
@@ -87,16 +87,16 @@ const AcademicQualifications = () => {
                                                 PROFESSIONAL QUALIFICATION
                                             </th>
                                             <td>
-                                               
+                                            <input/>
                                             </td>
                                             <td>
-                                                
+                                            <input/>
                                             </td>
                                             <td>
-                                                
+                                            <input/>
                                             </td>
                                             <td>
-                                                
+                                            <input/>
                                             </td>
                                         </tr>
                                         <tr id='addr1'></tr>
@@ -104,6 +104,7 @@ const AcademicQualifications = () => {
                                 </table>
 
                                 <label for="">Additional Skills</label>
+                                <input />
                             </div>
                         </div>
                         <div class="d-flex justify-content-between">

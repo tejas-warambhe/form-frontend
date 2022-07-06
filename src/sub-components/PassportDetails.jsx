@@ -42,10 +42,10 @@ const PassportDetails = () => {
                                     <input/>
                                 </td>
                                 <td>
-                                    <input/>
+                                    <input type="date"/>
                                 </td>
                                 <td>
-                                <input/>
+                                <input type="date"/>
                                 </td>
                             </tr>
                             <tr>
@@ -59,10 +59,10 @@ const PassportDetails = () => {
                                     <input/>
                                 </td>
                                 <td>
-                                    <input/>
+                                    <input type="date"/>
                                 </td>
                                 <td>
-                                    <input/>
+                                    <input type="date"/>
                                 </td>
                             </tr>
                             <tr>
@@ -76,10 +76,10 @@ const PassportDetails = () => {
                                     <input/> 
                                 </td>
                                 <td>
-                                    <input/> 
+                                    <input type="date"/> 
                                 </td>
                                 <td>
-                                    <input/> 
+                                    <input type="date"/> 
                                 </td>
                             </tr>
                             <tr id='addr1'></tr>
