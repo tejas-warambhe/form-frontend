@@ -22,8 +22,10 @@ import OnShoreService from "./sub-components/OnShoreService";
 import Declaration from "./sub-components/Declaration";
 function App() {
 
-  const { register, handleSubmit } = useForm();
-  const [data, setData] = useState("");
+  const [inputs, setInputs] = useState({
+    rank_applied: "",
+    present_rank:"",
+  });
   return (
     <Router>
     <div className="App">
@@ -61,8 +63,8 @@ function App() {
                 </div>
 
                   <Routes>
-                    <Route exact path="/" element={<ProfileDetails/>} />
-                    <Route exact path="/dependents" element={<NextofKeens/>} />
+                    <Route exact path="/" element={<ProfileDetails setInputs={setInputs} inputs={inputs}/>} />
+                    <Route exact path="/dependents" element={<NextofKeens setInputs={setInputs} inputs={inputs}/>} />
                     <Route exact path="/passport" element={<PassportDetails/>} />
                     <Route exact path="/seamenbook" element={<SeamenBook/>} />
                     <Route exact path="/academicQualifications" element={<AcademicQualifications/>} />
