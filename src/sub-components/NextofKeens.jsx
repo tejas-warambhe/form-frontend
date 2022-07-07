@@ -2,12 +2,21 @@ import React, { useEffect, useState } from "react";
 
 
 const NextofKeens = ({ inputs, setInputs }) => {
-    
+  const [a, setA] = useState(1);
+  const [curArr, setCurrArr] = useState([]);
+  const [formInputs, setFormInputs] = useState({
+    name: "",
+    relation: "",
+    ppno: 0,
+    dob: ""
+  });
     const [arr, setArr] = useState([0]);
-  const onChange = (e) => {
-    setInputs({ ...inputs, [e.target.name]: e.target.value });
+ 
+  const onFormChange = (e) => {
+    setFormInputs({ ...formInputs, [e.target.name]: e.target.value });
   };
-  let a = 1;
+  console.log(formInputs);
+  
   const sendData = async () => {
     const response = await fetch("http://localhost:5000/upload", {
       method: "POST",
@@ -20,10 +29,17 @@ const NextofKeens = ({ inputs, setInputs }) => {
     console.log(parseRes);
   };
   const incrementArr = () => {
-    a += 1;
-
-      setArr([...arr, a]);
     
+    setArr([...arr, a]);
+    setA(a+1);
+    setCurrArr([...curArr, formInputs]);
+    setFormInputs({
+      name: "",
+      relation: "",
+      ppno: 0,
+      dob: ""
+    });
+ 
   }
   const decrementArr = () => {
     var temp = arr;
@@ -33,7 +49,7 @@ const NextofKeens = ({ inputs, setInputs }) => {
     }
    
 }
-
+console.log(inputs);
 
   return (
     <div style={{ width: "100%" }}>
@@ -84,7 +100,9 @@ const NextofKeens = ({ inputs, setInputs }) => {
                         <td>
                           <input
                             type="text"
-                            name="name0"
+                            name="name"
+                            value={formInputs.name}
+                            onChange={(e) => onFormChange(e)}
                             placeholder="Name"
                             class="form-control"
                           />
@@ -92,18 +110,22 @@ const NextofKeens = ({ inputs, setInputs }) => {
                         <td>
                           <input
                             type="text"
-                            name="relation0"
+                            name="relation"
+                            value={formInputs.relation}
+                            onChange={(e) => onFormChange(e)}
                             placeholder="Relationship"
                             class="form-control"
                           />
                         </td>
                         <td>
-                          <input type="date" name="dob0" class="form-control" />
+                          <input type="date" name="dob" value={formInputs.dob} onChange ={(e) => onFormChange(e)} class="form-control" />
                         </td>
                         <td>
                           <input
                             type="text"
-                            name="ppno0"
+                            name="ppno"
+                            value={formInputs.ppno}
+                            onChange={(e) => onFormChange(e)}
                             placeholder="PP No."
                             class="form-control"
                           />
@@ -125,7 +147,24 @@ const NextofKeens = ({ inputs, setInputs }) => {
                 <hr />
 
                 <div>
-                  
+                  {curArr.map((ele, key) => {
+                    return (
+                      <div key={key}>
+                        <div>{ele.name}</div>
+                        <div>{ele.relation}</div>
+                        <div>{ele.dob}</div>
+                        <div>{ele.ppno}</div>
+                        <button className="btn btn-primary" 
+                                id={ele} 
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  setCurrArr(curArr.filter((ok) => {
+                                    return ele.ppno !== ok.ppno;
+                                  }));
+                                }}>Delete</button>
+                      </div>
+                    )
+                  })}
                 </div>
 
                 <div class="d-flex justify-content-between">
@@ -135,12 +174,17 @@ const NextofKeens = ({ inputs, setInputs }) => {
                   >
                     Previous
                   </a>
-                  <a
+                  <button
                     class="btn btn-primary btnNext2 my-3 "
-                    onclick="topFunction()"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      console.log("i was here");
+                      setInputs({...inputs, kin_array: curArr});
+
+                    }}
                   >
                     Next
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
