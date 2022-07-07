@@ -66,19 +66,19 @@ function App() {
                             <Routes>
                                 <Route exact path="/" element={<ProfileDetails setInputs={setInputs} inputs={inputs} />} />
                                 <Route exact path="/dependents" element={<NextofKeens setInputs={setInputs} inputs={inputs} />} />
-                                <Route exact path="/passport" element={<PassportDetails />} />
-                                <Route exact path="/seamenbook" element={<SeamenBook />} />
-                                <Route exact path="/academicQualifications" element={<AcademicQualifications />} />
-                                <Route exact path="/certificateofcompetency" element={<CertificateOfCompetancy />} />
-                                <Route exact path="/stcwandothercertificates" element={<StcwOtherCertificates />} />
-                                <Route exact path="/refrences" element={<Refrences />} />
-                                <Route exact path="/howyouknowus" element={<HowKnowUs />} />
-                                <Route exact path="/personaldetails" element={<PersonalDetails />} />
-                                <Route exact path="/additionalinformation" element={<AdditionalDetails />} />
-                                <Route exact path="/reasonofapplication" element={<ReasonOfApplication />} />
-                                <Route exact path="/seaexperience" element={<SeaExperience />} />
-                                <Route exact path="/onshoreservice" element={<OnShoreService />} />
-                                <Route exact path="/declaration" element={<Declaration />} />
+                                <Route exact path="/passport" element={<PassportDetails setInputs={setInputs} inputs={inputs}/>} />
+                                <Route exact path="/seamenbook" element={<SeamenBook setInputs={setInputs} inputs={inputs}/>} />
+                                <Route exact path="/academicQualifications" element={<AcademicQualifications setInputs={setInputs} inputs={inputs}/>} />
+                                <Route exact path="/certificateofcompetency" element={<CertificateOfCompetancy setInputs={setInputs} inputs={inputs}/>} />
+                                <Route exact path="/stcwandothercertificates" element={<StcwOtherCertificates setInputs={setInputs} inputs={inputs}/>} />
+                                <Route exact path="/refrences" element={<Refrences setInputs={setInputs} inputs={inputs}/>} />
+                                <Route exact path="/howyouknowus" element={<HowKnowUs setInputs={setInputs} inputs={inputs}/>} />
+                                <Route exact path="/personaldetails" element={<PersonalDetails setInputs={setInputs} inputs={inputs}/>} />
+                                <Route exact path="/additionalinformation" element={<AdditionalDetails setInputs={setInputs} inputs={inputs}/>} />
+                                <Route exact path="/reasonofapplication" element={<ReasonOfApplication setInputs={setInputs} inputs={inputs}/>} />
+                                <Route exact path="/seaexperience" element={<SeaExperience setInputs={setInputs} inputs={inputs}/>} />
+                                <Route exact path="/onshoreservice" element={<OnShoreService setInputs={setInputs} inputs={inputs}/>} />
+                                <Route exact path="/declaration" element={<Declaration setInputs={setInputs} inputs={inputs}/>} />
                             </Routes>
 
                         </div>

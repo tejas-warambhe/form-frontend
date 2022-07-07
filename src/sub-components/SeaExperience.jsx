@@ -1,6 +1,9 @@
 import React from 'react'
 
-const SeaExperience = () => {
+const SeaExperience = ({inputs, setInputs}) => {
+    const onChange = (e) => {
+        setInputs({ ...inputs, [e.target.name]: e.target.value });
+      };
   return (
     <div style={{width:"100%"}}>
                 <div >
