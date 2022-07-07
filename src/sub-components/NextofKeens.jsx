@@ -146,23 +146,32 @@ console.log(inputs);
                 </div>
                 <hr />
 
-                <div>
+                <div> 
+                <div  class="row align-items-center">
+                          <div class="col">Name</div>
+                          <div class="col">Relation</div>
+                          <div class="col">DOB</div>
+                          <div class="col">PP number</div>
+                          <div class="col">Delete?</div>
+                  </div>
+                  <hr />
                   {curArr.map((ele, key) => {
                     return (
-                      <div key={key}>
-                        <div>{ele.name}</div>
-                        <div>{ele.relation}</div>
-                        <div>{ele.dob}</div>
-                        <div>{ele.ppno}</div>
-                        <button className="btn btn-primary" 
-                                id={ele} 
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  setCurrArr(curArr.filter((ok) => {
-                                    return ele.ppno !== ok.ppno;
-                                  }));
-                                }}>Delete</button>
-                      </div>
+                        <div key={key} class="row align-items-center mt-2">
+                          <div class="col">{ele.name}</div>
+                          <div class="col">{ele.relation}</div>
+                          <div class="col">{ele.dob}</div>
+                          <div class="col">{ele.ppno}</div>
+                          <button className="col btn btn-primary" 
+                                  id={ele} 
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    setCurrArr(curArr.filter((ok) => {
+                                      return ele.ppno !== ok.ppno;
+                                    }));
+                                  }}>Delete
+                            </button>
+                        </div>
                     )
                   })}
                 </div>
