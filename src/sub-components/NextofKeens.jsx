@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-
 const NextofKeens = ({ inputs, setInputs }) => {
   const [a, setA] = useState(1);
   const [curArr, setCurrArr] = useState([]);
@@ -8,15 +7,15 @@ const NextofKeens = ({ inputs, setInputs }) => {
     name: "",
     relation: "",
     ppno: 0,
-    dob: ""
+    dob: "",
   });
-    const [arr, setArr] = useState([0]);
- 
+  const [arr, setArr] = useState([0]);
+
   const onFormChange = (e) => {
     setFormInputs({ ...formInputs, [e.target.name]: e.target.value });
   };
   console.log(formInputs);
-  
+
   const sendData = async () => {
     const response = await fetch("http://localhost:5000/upload", {
       method: "POST",
@@ -29,27 +28,24 @@ const NextofKeens = ({ inputs, setInputs }) => {
     console.log(parseRes);
   };
   const incrementArr = () => {
-    
     setArr([...arr, a]);
-    setA(a+1);
+    setA(a + 1);
     setCurrArr([...curArr, formInputs]);
     setFormInputs({
       name: "",
       relation: "",
       ppno: 0,
-      dob: ""
+      dob: "",
     });
- 
-  }
+  };
   const decrementArr = () => {
     var temp = arr;
-    
-    if(temp.length > 0){
-        setArr(temp.splice(0, temp.length- 1));
+
+    if (temp.length > 0) {
+      setArr(temp.splice(0, temp.length - 1));
     }
-   
-}
-console.log(inputs);
+  };
+  console.log(inputs);
 
   return (
     <div style={{ width: "100%" }}>
@@ -80,7 +76,7 @@ console.log(inputs);
                 </div>
 
                 <div class="mt-4">
-                <table
+                  <table
                     class="table table-bordered table-hover "
                     id="tab_logic"
                   >
@@ -118,7 +114,13 @@ console.log(inputs);
                           />
                         </td>
                         <td>
-                          <input type="date" name="dob" value={formInputs.dob} onChange ={(e) => onFormChange(e)} class="form-control" />
+                          <input
+                            type="date"
+                            name="dob"
+                            value={formInputs.dob}
+                            onChange={(e) => onFormChange(e)}
+                            class="form-control"
+                          />
                         </td>
                         <td>
                           <input
@@ -134,45 +136,53 @@ console.log(inputs);
                       <tr id="addr1"></tr>
                     </tbody>
                   </table>
-                  
                 </div>
                 <div class="d-flex justify-content-center my-4">
                   {/* <a id="delete_row" class="pull-left btn btn-primary" onClick={decrementArr}>
                     Delete Row
                   </a> */}
-                  <a id="add_row" class="btn btn-primary pull-right" onClick={incrementArr}>
+                  <a
+                    id="add_row"
+                    class="btn btn-primary pull-right"
+                    onClick={incrementArr}
+                  >
                     Submit
                   </a>
                 </div>
                 <hr />
 
-                <div> 
-                <div  class="row align-items-center">
-                          <div class="col">Name</div>
-                          <div class="col">Relation</div>
-                          <div class="col">DOB</div>
-                          <div class="col">PP number</div>
-                          <div class="col">Delete?</div>
+                <div>
+                  <div class="row align-items-center">
+                    <div class="col">Name</div>
+                    <div class="col">Relation</div>
+                    <div class="col">DOB</div>
+                    <div class="col">PP number</div>
+                    <div class="col">Delete?</div>
                   </div>
                   <hr />
                   {curArr.map((ele, key) => {
                     return (
-                        <div key={key} class="row align-items-center mt-2">
-                          <div class="col">{ele.name}</div>
-                          <div class="col">{ele.relation}</div>
-                          <div class="col">{ele.dob}</div>
-                          <div class="col">{ele.ppno}</div>
-                          <button className="col btn btn-primary" 
-                                  id={ele} 
-                                  onClick={(e) => {
-                                    e.preventDefault();
-                                    setCurrArr(curArr.filter((ok) => {
-                                      return ele.ppno !== ok.ppno;
-                                    }));
-                                  }}>Delete
-                            </button>
-                        </div>
-                    )
+                      <div key={key} class="row align-items-center mt-2">
+                        <div class="col">{ele.name}</div>
+                        <div class="col">{ele.relation}</div>
+                        <div class="col">{ele.dob}</div>
+                        <div class="col">{ele.ppno}</div>
+                        <button
+                          className="col btn btn-primary"
+                          id={ele}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            setCurrArr(
+                              curArr.filter((ok) => {
+                                return ele.ppno !== ok.ppno;
+                              })
+                            );
+                          }}
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    );
                   })}
                 </div>
 
@@ -188,8 +198,7 @@ console.log(inputs);
                     onClick={(e) => {
                       e.preventDefault();
                       console.log("i was here");
-                      setInputs({...inputs, kin_array: curArr});
-
+                      setInputs({ ...inputs, kin_array: curArr });
                     }}
                   >
                     Next

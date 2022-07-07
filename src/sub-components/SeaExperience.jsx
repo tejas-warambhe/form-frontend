@@ -1,130 +1,284 @@
-import React from 'react'
+import React, { useState } from "react";
 
-const SeaExperience = ({inputs, setInputs}) => {
-    const onChange = (e) => {
-        setInputs({ ...inputs, [e.target.name]: e.target.value });
-      };
+const SeaExperience = ({ inputs, setInputs }) => {
+  const [a, setA] = useState(1);
+  const [curArr, setCurrArr] = useState([]);
+  const [formInputs, setFormInputs] = useState({
+    Employer: "",
+    RPSL: "",
+    vessel_name: 0,
+    steam_motor: "",
+    DWT: "",
+    RANK: "",
+    engine_model: "",
+    BHP: "",
+    manned_unmanned_engine_room: "",
+    from: "",
+    to: "",
+    total: "",
+  });
+  const [arr, setArr] = useState([0]);
+
+  const onFormChange = (e) => {
+    setFormInputs({ ...formInputs, [e.target.name]: e.target.value });
+  };
+  console.log(formInputs);
+  const sendData = async () => {
+    const response = await fetch("http://localhost:5000/upload", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(inputs),
+    });
+    const parseRes = await response.json();
+    console.log(parseRes);
+  };
+  const incrementArr = () => {
+    setArr([...arr, a]);
+    setA(a + 1);
+    setCurrArr([...curArr, formInputs]);
+    setFormInputs({
+        Employer: "",
+        RPSL: "",
+        vessel_name: "",
+        steam_motor: "",
+        DWT: "",
+        RANK: "",
+        engine_model: "",
+        BHP: "",
+        manned_unmanned_engine_room: "",
+        from: "",
+        to: "",
+        total: "",
+    });
+  };
   return (
-    <div style={{width:"100%"}}>
-                <div >
-                    <div class="rounded-5 shadow p-4 ">
-                        <div class="container-90 display form-heading ">
-                            <h4>SEA EXPERIENCE: (Most recent at Top) Special Experience</h4>
+    <div style={{ width: "100%" }}>
+      <div>
+        <div class="rounded-5 shadow p-4 ">
+          <div class="container-90 display form-heading ">
+            <h4>SEA EXPERIENCE: (Most recent at Top) Special Experience</h4>
+          </div>
+          <div class="row clearfix ">
+            <div class="sea-tab column">
+              <table class="table table-bordered table-hover " id="tab_logic4 ">
+                <thead>
+                  <tr class="table-info ">
+                    <th class="text-center ">Employer</th>
+                    <th class="text-center ">RPSL Agent</th>
+                    <th class="text-center ">Vessel NAME & Type</th>
+                    <th class="text-center ">Steam /Motor</th>
+                    <th class="text-center ">DWT/GRT</th>
+                    <th class="text-center ">RANK</th>
+                    <th class="text-center ">Engine MODEL</th>
+                    <th class="text-center ">BHP</th>
+                    <th class="text-center ">Manned or Unmanned Engine Room</th>
+                    <th class="text-center ">FROM</th>
+                    <th class="text-center ">TO</th>
+                    <th class="text-center ">TOTAL</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id="addy0">
+                    <td>
+                      <input
+                        type="text "
+                        name="Employer"
+                        value={formInputs.Employer}
+                        onChange={(e) => onFormChange(e)}
+                        placeholder="Enter employer "
+                        class="form-control "
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text "
+                        name="RPSL"
+                        value={formInputs.RPSL}
+                        onChange={(e) => onFormChange(e)}
+                        class="form-control "
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text "
+                        name="vessel_name"
+                        value={formInputs.vessel_name}
+                        onChange={(e) => onFormChange(e)}
+                        class="form-control "
+                      />
+                    </td>
+                    <td>
+                      <select
+                        class="form-control "
+                        name="steam_motor"
+                        id=" "
+                        value={formInputs.steam_motor}
+                        onChange={(e) => onFormChange(e)}
+                      >
+                        <option value=" "></option>
+                        <option value="steam ">Steam</option>
+                        <option value="motor ">Motor</option>
+                      </select>
+                    </td>
 
-                        </div>
-                        <div class="row clearfix ">
-                            <div class="sea-tab column">
-                                <table class="table table-bordered table-hover "  id="tab_logic4 ">
-                                    <thead>
-                                        <tr class="table-info ">
-                                            <th class="text-center ">
-                                                Employer
-                                            </th>
-                                            <th class="text-center ">
-                                                RPSL Agent
-                                            </th>
-                                            <th class="text-center ">
-                                                Vessel NAME & Type
-                                            </th>
-                                            <th class="text-center ">
-                                                Steam /Motor
-                                            </th>
-                                            <th class="text-center ">
-                                                DWT/GRT
-                                            </th>
-                                            <th class="text-center ">
-                                                RANK
-                                            </th>
-                                            <th class="text-center ">
-                                                Engine MODEL
-                                            </th>
-                                            <th class="text-center ">
-                                                BHP
-                                            </th>
-                                            <th class="text-center ">
-
-                                                Manned or Unmanned Engine Room
-                                            </th>
-                                            <th class="text-center ">
-                                                FROM
-                                            </th>
-                                            <th class="text-center ">
-                                                TO
-                                            </th>
-                                            <th class="text-center ">
-                                                TOTAL
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr id='addy0'>
-                                            <td>
-                                                <input type="text " name='empl' placeholder="Enter employer " class="form-control " />
-                                            </td>
-                                            <td>
-                                                <input type="text " name='rspl0'  class="form-control " />
-                                            </td>
-                                            <td>
-                                                <input type="text " name='vessel0'  class="form-control " />
-                                            </td>
-                                            <td>
-                                                <select class="form-control " name='stream_motor0' id=" ">
-                                                <option value=" "></option>
-                                                <option value="steam ">Steam</option>
-                                                <option value="motor ">Motor</option>
-                                            </select>
-                                            </td>
-
-                                            <td>
-                                                <input type="number " name='dwt0' class="form-control " />
-                                            </td>
-                                            <td>
-                                                <input type="text " name='rank0'class="form-control " />
-                                            </td>
-                                            <td>
-                                                <input type="text " name='engine0' class="form-control " />
-                                            </td>
-                                            <td>
-                                                <input type="text " name='bhp0' class="form-control " />
-                                            </td>
-                                            <td>
-                                                <select name="engine_room " class="form-control ">
-                                                <option value="--- " default>---</option>
-                                                <option value="Manned ">Manned</option>
-                                                <option value="Unmanned ">Unmanned</option>
-
-                                            </select>
-                                            </td>
-                                            <td>
-                                                <input type="date " name='fromdt0' class="form-control " />
-                                            </td>
-                                            <td>
-                                                <input type="date " name='todt0' pattern=" " class="form-control " />
-                                            </td>
-                                            <td>
-                                                <input type="number " name='total0' class="form-control " />
-                                            </td>
-                                        </tr>
-                                        <tr id='addy1'></tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="mt-3">
-                            <div class="d-flex justify-content-between ">
-                                <a id="delete_row4" class="pull-left btn btn-primary">Delete Row</a>
-                                <a id="add_row4" class="btn btn-primary pull-right">Add Row</a>
-                            </div>
-                            <hr />
-                            <div class="d-flex justify-content-between">
-                                <a class="btn btn-primary btnPrevious15" onclick="topFunction()">Previous</a>
-                                <a class="btn btn-primary btnNext15" onclick="topFunction()">Next</a>
-                            </div>
-                        </div>
-                    </div>
+                    <td>
+                      <input
+                        type="number "
+                        name="DWT"
+                        class="form-control "
+                        value={formInputs.DWT}
+                        onChange={(e) => onFormChange(e)}
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text "
+                        name="RANK"
+                        class="form-control "
+                        value={formInputs.RANK}
+                        onChange={(e) => onFormChange(e)}
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text "
+                        name="engine_model"
+                        class="form-control "
+                        value={formInputs.engine_model}
+                        onChange={(e) => onFormChange(e)}
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text "
+                        name="BHP"
+                        class="form-control "
+                        value={formInputs.BHP}
+                        onChange={(e) => onFormChange(e)}
+                      />
+                    </td>
+                    <td>
+                      <select
+                        name="manned_unmanned_engine_room"
+                        class="form-control "
+                        value={formInputs.manned_unmanned_engine_room}
+                        onChange={(e) => onFormChange(e)}
+                      >
+                        <option value="--- " default>
+                          ---
+                        </option>
+                        <option value="Manned ">Manned</option>
+                        <option value="Unmanned ">Unmanned</option>
+                      </select>
+                    </td>
+                    <td>
+                      <input
+                        type="date"
+                        name="from"
+                        class="form-control "
+                        value={formInputs.from}
+                        onChange={(e) => onFormChange(e)}
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="date"
+                        name="to"
+                        pattern=" "
+                        class="form-control "
+                        value={formInputs.to}
+                        onChange={(e) => onFormChange(e)}
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="number "
+                        name="total"
+                        class="form-control "
+                        value={formInputs.total}
+                        onChange={(e) => onFormChange(e)}
+                      />
+                    </td>
+                  </tr>
+                  <tr id="addy1"></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="mt-3">
+            <div class="d-flex justify-content-center my-4">
+              {/* <a id="delete_row4" class="pull-left btn btn-primary">
+                Delete Row
+              </a> */}
+              <a id="add_row" class="btn btn-primary pull-right" onClick={incrementArr}>
+                    Submit
+                  </a>
+            </div>
+            <hr />
+            <div>
+                  <div class="row align-items-center">
+                    <div class="col">Employer</div>
+                    <div class="col">RPSL Agent</div>
+                    <div class="col">Vessel NAME & Type</div>
+                    <div class="col">Steam /Motor</div>
+                    <div class="col">DWT/GRT</div>
+                    <div class="col">RANK</div>
+                    <div class="col">Engine MODEL</div>
+                    <div class="col">BHP</div>
+                    <div class="col">Manned or Unmanned Engine Room</div>
+                    <div class="col">FROM</div>
+                    <div class="col">TO</div>
+                    <div class="col">TOTAL</div>
+                  </div>
+                  <hr />
+                  {curArr.map((ele, key) => {
+                    return (
+                      <div key={key} class="row align-items-center mt-2">
+                        <div class="col">{ele.Employer}</div>
+                        <div class="col">{ele.RPSL}</div>
+                        <div class="col">{ele.vessel_name}</div>
+                        <div class="col">{ele.steam_motor}</div>
+                        <div class="col">{ele.DWT}</div>
+                        <div class="col">{ele.RANK}</div>
+                        <div class="col">{ele.engine_model}</div>
+                        <div class="col">{ele.BHP}</div>
+                        <div class="col">{ele.manned_unmanned_engine_room}</div>
+                        <div class="col">{ele.from}</div>
+                        <div class="col">{ele.to}</div>
+                        <div class="col">{ele.total}</div>
+                        <button
+                          className="col btn btn-primary"
+                          id={ele}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            setCurrArr(
+                              curArr.filter((ok) => {
+                                return ele.total !== ok.total;
+                              })
+                            );
+                          }}
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    );
+                  })}
                 </div>
+            <div class="d-flex justify-content-between">
+              <a class="btn btn-primary btnPrevious15" onclick="topFunction()">
+                Previous
+              </a>
+              <a class="btn btn-primary btnNext15" onclick="topFunction()">
+                Next
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default SeaExperience
+export default SeaExperience;
