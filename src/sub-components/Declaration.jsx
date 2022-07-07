@@ -12,7 +12,7 @@ const Declaration = () => {
                             whose names appear on them. Any false declaration may render me liable for termination or dismissal
                         </p>
 
-                        <div class="row my-3">
+                        <div class="row my-3" style={{alignItems:"flex-end"}}>
                             <div class="col-md-4">
                                 <label>Date: </label> <input/>
                             </div>
