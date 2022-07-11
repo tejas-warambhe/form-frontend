@@ -37,15 +37,15 @@ const OnShoreService = ({ inputs, setInputs }) => {
     setA(a + 1);
     setCurrArr([...curArr, formInputs]);
     setFormInputs({
-        Employer: "",
-        Title: "",
-        Workshop: "",
-        major_machines: "",
-        personel_supervised: "",
-        size_tonnage: "",
-        from: "",
-        to: "",
-        any_useful_info: "",
+      Employer: "",
+      Title: "",
+      Workshop: "",
+      major_machines: "",
+      personel_supervised: "",
+      size_tonnage: "",
+      from: "",
+      to: "",
+      any_useful_info: "",
     });
   };
   return (
@@ -175,61 +175,71 @@ const OnShoreService = ({ inputs, setInputs }) => {
                 Delete Row
               </a> */}
               <a
-                    id="add_row"
-                    class="btn btn-primary pull-right"
-                    onClick={incrementArr}
-                  >
-                    Submit
-                  </a>
+                id="add_row"
+                class="btn btn-primary pull-right"
+                onClick={incrementArr}
+              >
+                Submit
+              </a>
             </div>
             <hr />
             <div>
-                  <div class="row align-items-center">
-                    <div class="col">Employer</div>
-                    <div class="col">Title</div>
-                    <div class="col">Workshop/ Shipyard</div>
-                    <div class="col">Name of Major Machines You Worked with</div>
-                    <div class="col">No of Personnel Supervised by you</div>
-                    <div class="col">Size & tonnage of Vessel Repaired</div>
-                    <div class="col">Period (From)</div>
-                    <div class="col">Period (To)</div>
-                    <div class="col">Any other useful information</div>
-                    <div class="col">Delete</div>
+              <div class="row align-items-center">
+                <div class="col">Employer</div>
+                <div class="col">Title</div>
+                <div class="col">Workshop/ Shipyard</div>
+                <div class="col">Name of Major Machines You Worked with</div>
+                <div class="col">No of Personnel Supervised by you</div>
+                <div class="col">Size & tonnage of Vessel Repaired</div>
+                <div class="col">Period (From)</div>
+                <div class="col">Period (To)</div>
+                <div class="col">Any other useful information</div>
+                <div class="col">Delete</div>
+              </div>
+              <hr />
+              {curArr.map((ele, key, index) => {
+                return (
+                  <div key={key} class="row align-items-center mt-2">
+                    <div class="col">{ele.Employer}</div>
+                    <div class="col">{ele.Title}</div>
+                    <div class="col">{ele.Workshop}</div>
+                    <div class="col">{ele.major_machines}</div>
+                    <div class="col">{ele.personel_supervised}</div>
+                    <div class="col">{ele.size_tonnage}</div>
+                    <div class="col">{ele.from}</div>
+                    <div class="col">{ele.to}</div>
+                    <div class="col">{ele.any_useful_info}</div>
+                    <button
+                      className="col btn btn-primary"
+                      id={ele}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setCurrArr(
+                          curArr.filter((ok) => {
+                            return ele.from !== ok.from;
+                          })
+                        );
+                      }}
+                    >
+                      Delete
+                    </button>
                   </div>
-                  <hr />
-                  {curArr.map((ele, key, index) => {
-                    return (
-                      <div key={key} class="row align-items-center mt-2">
-                        <div class="col">{ele.Employer}</div>
-                        <div class="col">{ele.Title}</div>
-                        <div class="col">{ele.Workshop}</div>
-                        <div class="col">{ele.major_machines}</div>
-                        <div class="col">{ele.personel_supervised}</div>
-                        <div class="col">{ele.size_tonnage}</div>
-                        <div class="col">{ele.from}</div>
-                        <div class="col">{ele.to}</div>
-                        <div class="col">{ele.any_useful_info}</div>
-                        <button
-                          className="col btn btn-primary"
-                          id={ele}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            setCurrArr(
-                              curArr.filter((ok) => {
-                                return ele.from !== ok.from;
-                              })
-                            );
-                          }}
-                        >
-                          Delete
-                        </button>
-                      </div>
-                    );
-                  })}
-                </div>
+                );
+              })}
+            </div>
             <div class="d-flex justify-content-between">
               <a class="btn btn-primary btnPrevious16 ">Previous</a>
-              <a class="btn btn-primary btnNext16  ">Next</a>
+              <button
+                class="btn btn-primary btnNext16"
+                onClick={(e) => {
+                  e.preventDefault();
+                  console.log("i was here", curArr);
+                  setInputs({ ...inputs, on_shore: [...curArr] });
+                  sendData();
+                }}
+              >
+                Next
+              </button>
             </div>
           </div>
         </div>

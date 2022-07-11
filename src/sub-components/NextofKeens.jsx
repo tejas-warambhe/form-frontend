@@ -197,8 +197,9 @@ const NextofKeens = ({ inputs, setInputs }) => {
                     class="btn btn-primary btnNext2 my-3 "
                     onClick={(e) => {
                       e.preventDefault();
-                      console.log("i was here");
-                      setInputs({ ...inputs, kin_array: curArr });
+                      console.log("i was here", curArr);
+                      setInputs({ ...inputs, kin_array: [...curArr] });
+                      sendData();
                     }}
                   >
                     Next

@@ -6,7 +6,7 @@ const SeaExperience = ({ inputs, setInputs }) => {
   const [formInputs, setFormInputs] = useState({
     Employer: "",
     RPSL: "",
-    vessel_name: 0,
+    vessel_name: "",
     steam_motor: "",
     DWT: "",
     RANK: "",
@@ -39,18 +39,18 @@ const SeaExperience = ({ inputs, setInputs }) => {
     setA(a + 1);
     setCurrArr([...curArr, formInputs]);
     setFormInputs({
-        Employer: "",
-        RPSL: "",
-        vessel_name: "",
-        steam_motor: "",
-        DWT: "",
-        RANK: "",
-        engine_model: "",
-        BHP: "",
-        manned_unmanned_engine_room: "",
-        from: "",
-        to: "",
-        total: "",
+      Employer: "",
+      RPSL: "",
+      vessel_name: "",
+      steam_motor: "",
+      DWT: "",
+      RANK: "",
+      engine_model: "",
+      BHP: "",
+      manned_unmanned_engine_room: "",
+      from: "",
+      to: "",
+      total: "",
     });
   };
   return (
@@ -212,67 +212,79 @@ const SeaExperience = ({ inputs, setInputs }) => {
               {/* <a id="delete_row4" class="pull-left btn btn-primary">
                 Delete Row
               </a> */}
-              <a id="add_row" class="btn btn-primary pull-right" onClick={incrementArr}>
-                    Submit
-                  </a>
+              <a
+                id="add_row"
+                class="btn btn-primary pull-right"
+                onClick={incrementArr}
+              >
+                Submit
+              </a>
             </div>
             <hr />
             <div>
-                  <div class="row align-items-center">
-                    <div class="col">Employer</div>
-                    <div class="col">RPSL Agent</div>
-                    <div class="col">Vessel NAME & Type</div>
-                    <div class="col">Steam /Motor</div>
-                    <div class="col">DWT/GRT</div>
-                    <div class="col">RANK</div>
-                    <div class="col">Engine MODEL</div>
-                    <div class="col">BHP</div>
-                    <div class="col">Manned or Unmanned Engine Room</div>
-                    <div class="col">FROM</div>
-                    <div class="col">TO</div>
-                    <div class="col">TOTAL</div>
+              <div class="row align-items-center">
+                <div class="col">Employer</div>
+                <div class="col">RPSL Agent</div>
+                <div class="col">Vessel NAME & Type</div>
+                <div class="col">Steam /Motor</div>
+                <div class="col">DWT/GRT</div>
+                <div class="col">RANK</div>
+                <div class="col">Engine MODEL</div>
+                <div class="col">BHP</div>
+                <div class="col">Manned or Unmanned Engine Room</div>
+                <div class="col">FROM</div>
+                <div class="col">TO</div>
+                <div class="col">TOTAL</div>
+              </div>
+              <hr />
+              {curArr.map((ele, key) => {
+                return (
+                  <div key={key} class="row align-items-center mt-2">
+                    <div class="col">{ele.Employer}</div>
+                    <div class="col">{ele.RPSL}</div>
+                    <div class="col">{ele.vessel_name}</div>
+                    <div class="col">{ele.steam_motor}</div>
+                    <div class="col">{ele.DWT}</div>
+                    <div class="col">{ele.RANK}</div>
+                    <div class="col">{ele.engine_model}</div>
+                    <div class="col">{ele.BHP}</div>
+                    <div class="col">{ele.manned_unmanned_engine_room}</div>
+                    <div class="col">{ele.from}</div>
+                    <div class="col">{ele.to}</div>
+                    <div class="col">{ele.total}</div>
+                    <button
+                      className="col btn btn-primary"
+                      id={ele}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setCurrArr(
+                          curArr.filter((ok) => {
+                            return ele.total !== ok.total;
+                          })
+                        );
+                      }}
+                    >
+                      Delete
+                    </button>
                   </div>
-                  <hr />
-                  {curArr.map((ele, key) => {
-                    return (
-                      <div key={key} class="row align-items-center mt-2">
-                        <div class="col">{ele.Employer}</div>
-                        <div class="col">{ele.RPSL}</div>
-                        <div class="col">{ele.vessel_name}</div>
-                        <div class="col">{ele.steam_motor}</div>
-                        <div class="col">{ele.DWT}</div>
-                        <div class="col">{ele.RANK}</div>
-                        <div class="col">{ele.engine_model}</div>
-                        <div class="col">{ele.BHP}</div>
-                        <div class="col">{ele.manned_unmanned_engine_room}</div>
-                        <div class="col">{ele.from}</div>
-                        <div class="col">{ele.to}</div>
-                        <div class="col">{ele.total}</div>
-                        <button
-                          className="col btn btn-primary"
-                          id={ele}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            setCurrArr(
-                              curArr.filter((ok) => {
-                                return ele.total !== ok.total;
-                              })
-                            );
-                          }}
-                        >
-                          Delete
-                        </button>
-                      </div>
-                    );
-                  })}
-                </div>
+                );
+              })}
+            </div>
             <div class="d-flex justify-content-between">
               <a class="btn btn-primary btnPrevious15" onclick="topFunction()">
                 Previous
               </a>
-              <a class="btn btn-primary btnNext15" onclick="topFunction()">
+              <button
+                class="btn btn-primary btnNext15"
+                onClick={(e) => {
+                  e.preventDefault();
+                  console.log("i was here", curArr);
+                  setInputs({ ...inputs, special_experience: curArr });
+                  sendData();
+                }}
+              >
                 Next
-              </a>
+              </button>
             </div>
           </div>
         </div>
