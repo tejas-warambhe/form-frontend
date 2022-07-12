@@ -20,8 +20,7 @@ import SeaExperienceAdmin from "../sub-components/SeaExperienceAdmin";
 
 function EditPage() {
     const [searchParams, setSearchParams] = useSearchParams();
-    // searchParams.get("q")
-    // const { id } = searchParams.get("q");
+    const [loading, setLoading] = useState(true);
     const [inputs, setInputs] = useState({
         kin_array: [],
         on_shore: [],
@@ -40,6 +39,7 @@ function EditPage() {
         console.log("i was here", parseRes.kin_array);
         console.log(parseRes, "after death");
         setInputs(parseRes);
+        setLoading(false);
     }
     // getDetails();
 
@@ -64,7 +64,8 @@ function EditPage() {
 
 
   return (
-    <div>
+        loading  ? <div>Loading</div> :  
+        <div>
       <ProfileDetails setInputs={setInputs} inputs={inputs} />
       <NextOfKinsAdmin setInputs={setInputs} inputs={inputs} getDetails={getDetails}/>
       <PassportDetails setInputs={setInputs} inputs={inputs} />
@@ -82,6 +83,8 @@ function EditPage() {
       <Declaration setInputs={setInputs} inputs={inputs} />
       <button className="btn btn-primary" onClick={(e) => updateForm(e)}> Edit </button>
     </div>
+    
+      
   );
 }
 

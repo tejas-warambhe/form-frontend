@@ -48,9 +48,10 @@ const NextOfKinsAdmin = ({ inputs, setInputs, getDetails }) => {
   };
   console.log(inputs);
 
-  useEffect(() => {
-    getDetails();
-  }, [])
+  // useEffect( async () => {
+  //   await getDetails();
+    
+  // }, [])
 
   return (
     <div style={{ width: "100%" }}>
