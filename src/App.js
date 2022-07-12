@@ -20,11 +20,17 @@ import ReasonOfApplication from "./sub-components/ReasonOfApplication";
 import SeaExperience from "./sub-components/SeaExperience";
 import OnShoreService from "./sub-components/OnShoreService";
 import Declaration from "./sub-components/Declaration";
+import Admin from "./components/Admin";
+import EditPage from "./components/EditPage";
 function App() {
 
     const [inputs, setInputs] = useState({
         rank_applied: "",
         present_rank: "",
+        first_name: "",
+        last_name: "",
+        middle_name:"",
+        kin_array: []
     });
     return (
         <Router>
@@ -79,6 +85,8 @@ function App() {
                                 <Route exact path="/seaexperience" element={<SeaExperience setInputs={setInputs} inputs={inputs}/>} />
                                 <Route exact path="/onshoreservice" element={<OnShoreService setInputs={setInputs} inputs={inputs}/>} />
                                 <Route exact path="/declaration" element={<Declaration setInputs={setInputs} inputs={inputs}/>} />
+                                <Route exact path="/admin/edit" element={<EditPage/>} />
+                                <Route exact path="/admin" element={<Admin/>}/>
                             </Routes>
 
                         </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const OnShoreService = ({ inputs, setInputs }) => {
+const OnShoreServiceAdmin = ({ inputs, setInputs }) => {
   const [a, setA] = useState(1);
   const [curArr, setCurrArr] = useState([]);
   const [formInputs, setFormInputs] = useState({
@@ -22,7 +22,7 @@ const OnShoreService = ({ inputs, setInputs }) => {
   console.log(formInputs);
 
   const sendData = async () => {
-    const response = await fetch("https://marine-form-backend.herokuapp.com/upload", {
+    const response = await fetch("http://localhost:5000/upload", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -248,4 +248,4 @@ const OnShoreService = ({ inputs, setInputs }) => {
   );
 };
 
-export default OnShoreService;
+

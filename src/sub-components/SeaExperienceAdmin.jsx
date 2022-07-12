@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-const SeaExperience = ({ inputs, setInputs }) => {
+const SeaExperienceAdmin = ({ inputs, setInputs, getDetails }) => {
   const [a, setA] = useState(1);
-  const [curArr, setCurrArr] = useState([]);
+  const [curArr, setCurrArr] = useState(inputs.special_experience);
   const [formInputs, setFormInputs] = useState({
     Employer: "",
     RPSL: "",
@@ -53,6 +53,9 @@ const SeaExperience = ({ inputs, setInputs }) => {
       total: "",
     });
   };
+  useEffect(() => {
+    getDetails();
+  }, [])
   return (
     <div style={{ width: "100%" }}>
       <div>
@@ -280,7 +283,7 @@ const SeaExperience = ({ inputs, setInputs }) => {
                   e.preventDefault();
                   console.log("i was here", curArr);
                   setInputs({ ...inputs, special_experience: curArr });
-                  // sendData();
+                //   sendData();
                 }}
               >
                 Next
@@ -293,4 +296,4 @@ const SeaExperience = ({ inputs, setInputs }) => {
   );
 };
 
-export default SeaExperience;
+export default SeaExperienceAdmin;

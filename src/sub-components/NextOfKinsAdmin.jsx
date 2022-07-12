@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-const NextofKeens = ({ inputs, setInputs }) => {
+const NextOfKinsAdmin = ({ inputs, setInputs, getDetails }) => {
   const [a, setA] = useState(1);
-  const [curArr, setCurrArr] = useState([]);
+  console.log(inputs.kin_array, "here cow");
+  const [curArr, setCurrArr] = useState(inputs.kin_array);
   const [formInputs, setFormInputs] = useState({
     name: "",
     relation: "",
@@ -46,6 +47,10 @@ const NextofKeens = ({ inputs, setInputs }) => {
     }
   };
   console.log(inputs);
+
+  useEffect(() => {
+    getDetails();
+  }, [])
 
   return (
     <div style={{ width: "100%" }}>
@@ -199,7 +204,7 @@ const NextofKeens = ({ inputs, setInputs }) => {
                       e.preventDefault();
                       console.log("i was here", curArr);
                       setInputs({ ...inputs, kin_array: [...curArr] });
-                      // sendData();
+                    //   sendData();
                     }}
                   >
                     Next
@@ -217,4 +222,4 @@ const NextofKeens = ({ inputs, setInputs }) => {
   );
 };
 
-export default NextofKeens;
+export default NextOfKinsAdmin;

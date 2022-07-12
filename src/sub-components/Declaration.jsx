@@ -1,6 +1,17 @@
 import React from 'react'
 
-const Declaration = () => {
+const Declaration = ({inputs, setInputs}) => {
+    const sendData = async () => {
+        const response = await fetch("https://marine-form-backend.herokuapp.com/upload", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(inputs),
+        });
+        const parseRes = await response.json();
+        console.log(parseRes);
+      };
   return (
     <div style={{width:"100%"}}>
                         <div >
@@ -29,7 +40,12 @@ const Declaration = () => {
                         <hr class="mt-3" />
                         <div class="end-tab">
                             <a class="btn btn-primary btnPrevious17">Previous</a>
-                            <button class="btn btn-success nautical-submit" type="submit" title="Send">Send</button>
+                            <button class="btn btn-success nautical-submit" type="submit" title="Send" onClick={
+                                (e) => {
+                                    e.preventDefault();
+                                    sendData();
+                                }
+                            }>Send</button>
                         </div>
                     </div>
                 </div>

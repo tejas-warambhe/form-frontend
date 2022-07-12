@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-const OnShoreService = ({ inputs, setInputs }) => {
+const ShoreAdmin = ({ inputs, setInputs, getDetails }) => {
   const [a, setA] = useState(1);
-  const [curArr, setCurrArr] = useState([]);
+  const [curArr, setCurrArr] = useState(inputs.on_shore);
   const [formInputs, setFormInputs] = useState({
     Employer: "",
     Title: "",
@@ -48,6 +48,9 @@ const OnShoreService = ({ inputs, setInputs }) => {
       any_useful_info: "",
     });
   };
+  useEffect(() => {
+    getDetails();
+  }, [])
   return (
     <div style={{ width: "100%" }}>
       <div>
@@ -235,7 +238,7 @@ const OnShoreService = ({ inputs, setInputs }) => {
                   e.preventDefault();
                   console.log("i was here", curArr);
                   setInputs({ ...inputs, on_shore: [...curArr] });
-                  // sendData();
+                  sendData();
                 }}
               >
                 Next
@@ -248,4 +251,4 @@ const OnShoreService = ({ inputs, setInputs }) => {
   );
 };
 
-export default OnShoreService;
+export default ShoreAdmin;

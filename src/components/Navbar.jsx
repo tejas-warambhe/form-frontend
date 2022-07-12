@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
     <div>
@@ -28,7 +28,7 @@ const Navbar = () => {
                     <li className="nav-btn"><a className="navigation-link" href="https://nauticalglobal.com/contact.html">Contact</a></li>
                     {/* {% if user.is_authenticated %} */}
                     <li className="btn btn-link nav-btn" style={{ padding: "10px" }}>
-                        <a className="navigation-link" href="{% url 'admin_form'%}">Admin Panel</a>
+                        <Link className="navigation-link" to="/admin">Admin Panel</Link>
                     </li>
                     <li className="btn btn-link nav-btn" style={{ padding: "10px" }}>
                         <a className="navigation-link" href="{% url 'logout'%}">Log Out</a>
