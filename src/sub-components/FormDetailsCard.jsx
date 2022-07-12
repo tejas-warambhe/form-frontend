@@ -9,7 +9,7 @@ function FormDetailsCard({ name, present_rank, rank_applied, id, getForms }) {
 
   const deleteForm = async (e) => {
     e.preventDefault();
-    const response = await fetch(`https://marine-form-backend.herokuapp.com/admin/form/${id}`, {
+    const response = await fetch(`https://marine-form-backend.herokuapp.com/admin/form/delete/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

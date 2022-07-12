@@ -28,7 +28,8 @@ function EditPage() {
         special_experience: []
     });
     const getDetails = async () =>{
-        const response = await fetch(`https://marine-form-backend.herokuapp.com/admin/form/${searchParams.get("q")}`, {
+        const query = searchParams.get("q");
+        const response = await fetch(`https://marine-form-backend.herokuapp.com/admin/form/${query}`, {
             method: "GET",
             headers:{
                 "Content-Type" : "application/json"
@@ -44,7 +45,8 @@ function EditPage() {
 
     const updateForm = async (e) => {
         e.preventDefault();
-        const response = await fetch(`https://marine-form-backend.herokuapp.com/admin/form/${searchParams.get("q")}`, {
+        const query = searchParams.get("q");
+        const response = await fetch(`https://marine-form-backend.herokuapp.com/admin/form/update/${query}`, {
             method: "PUT",
             headers: {
                 "Content-Type" : "application/json"
