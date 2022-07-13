@@ -199,7 +199,7 @@ const OnShoreService = ({ inputs, setInputs }) => {
               <hr />
               {curArr.map((ele, key, index) => {
                 return (
-                  <div key={key} class="row align-items-center mt-2">
+                  <div key={key} class="row align-items-center my-2">
                     <div class="col">{ele.Employer}</div>
                     <div class="col">{ele.Title}</div>
                     <div class="col">{ele.Workshop}</div>
