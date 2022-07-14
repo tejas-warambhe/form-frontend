@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import FormDetailsCard from "../sub-components/FormDetailsCard";
 
 function Admin() {
+
+  
+
   const [forms, setForms] = useState([]);
   const getForms = async () => {
     const response = await fetch("https://marine-form-backend.herokuapp.com/admin/forms", {

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
 
-const AcademicQualifications = ({ inputs, setInputs }) => {
+const AcademicQualificationsAdmin = ({ inputs, setInputs }) => {
   const onChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
@@ -185,4 +185,4 @@ const AcademicQualifications = ({ inputs, setInputs }) => {
   );
 };
 
-export default AcademicQualifications;
+export default AcademicQualificationsAdmin;

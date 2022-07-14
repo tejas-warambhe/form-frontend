@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
 
-const SeamenBook = ({ inputs, setInputs }) => {
+const SeamenBookAdmin = ({ inputs, setInputs }) => {
   const onChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
@@ -144,7 +144,7 @@ const SeamenBook = ({ inputs, setInputs }) => {
             </button>
             <button class="btn btn-primary btnNext4 my-3 " onClick={(e) => {
               e.preventDefault();
-              navigate('/academicQualifications');
+              navigate('/academicQualifications?q={}');
             }}>
               Next
             </button>
@@ -155,4 +155,4 @@ const SeamenBook = ({ inputs, setInputs }) => {
   );
 };
 
-export default SeamenBook;
+export default SeamenBookAdmin;

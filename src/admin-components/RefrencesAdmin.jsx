@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
 
-const Refrences = ({ inputs, setInputs }) => {
+const RefrencesAdmin = ({ inputs, setInputs }) => {
   const onChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
@@ -122,4 +122,4 @@ const Refrences = ({ inputs, setInputs }) => {
   );
 };
 
-export default Refrences;
+export default RefrencesAdmin;

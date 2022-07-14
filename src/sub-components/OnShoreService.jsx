@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 const OnShoreService = ({ inputs, setInputs }) => {
   const [a, setA] = useState(1);
@@ -48,6 +49,7 @@ const OnShoreService = ({ inputs, setInputs }) => {
       any_useful_info: "",
     });
   };
+  let navigate = useNavigate();
   return (
     <div style={{ width: "100%" }}>
       <div>
@@ -199,7 +201,7 @@ const OnShoreService = ({ inputs, setInputs }) => {
               <hr />
               {curArr.map((ele, key, index) => {
                 return (
-                  <div key={key} class="row align-items-center my-2">
+                  <div key={key} class="row align-items-center mt-2">
                     <div class="col">{ele.Employer}</div>
                     <div class="col">{ele.Title}</div>
                     <div class="col">{ele.Workshop}</div>
@@ -228,14 +230,18 @@ const OnShoreService = ({ inputs, setInputs }) => {
               })}
             </div>
             <div class="d-flex justify-content-between">
-              <a class="btn btn-primary btnPrevious16 ">Previous</a>
+              <button class="btn btn-primary btnPrevious16" onClick={(e) => {
+                e.preventDefault();
+                navigate('/seaexperence');
+              }}>Previous</button>
               <button
                 class="btn btn-primary btnNext16"
                 onClick={(e) => {
                   e.preventDefault();
-                  console.log("i was here", curArr);
+                  // console.log("i was here", curArr);
                   setInputs({ ...inputs, on_shore: [...curArr] });
                   // sendData();
+                  navigate('/declaration')
                 }}
               >
                 Next

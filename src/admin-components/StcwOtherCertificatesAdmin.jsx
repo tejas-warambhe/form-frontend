@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
 
-const StcwOtherCertificates = ({ inputs, setInputs }) => {
+const StcwOtherCertificatesAdmin = ({ inputs, setInputs }) => {
   let navigate = useNavigate();
   const onChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
@@ -1639,4 +1639,4 @@ const StcwOtherCertificates = ({ inputs, setInputs }) => {
   );
 };
 
-export default StcwOtherCertificates;
+export default StcwOtherCertificatesAdmin;

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
 
-const PersonalDetails = ({ inputs, setInputs }) => {
+const PersonalDetailsAdmin = ({ inputs, setInputs }) => {
   const onChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
@@ -161,4 +161,4 @@ const PersonalDetails = ({ inputs, setInputs }) => {
   );
 };
 
-export default PersonalDetails;
+export default PersonalDetailsAdmin;

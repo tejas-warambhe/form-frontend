@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const HowKnowUs = ({ inputs, setInputs }) => {
+const HowKnowUsAdmin = ({ inputs, setInputs }) => {
   const onChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
@@ -152,4 +152,4 @@ const HowKnowUs = ({ inputs, setInputs }) => {
   );
 };
 
-export default HowKnowUs;
+export default HowKnowUsAdmin;

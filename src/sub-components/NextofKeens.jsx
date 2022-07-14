@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 const NextofKeens = ({ inputs, setInputs }) => {
   const [a, setA] = useState(1);
   const [curArr, setCurrArr] = useState([]);
@@ -47,6 +47,7 @@ const NextofKeens = ({ inputs, setInputs }) => {
   };
   console.log(inputs);
 
+  let navigate = useNavigate();
   return (
     <div style={{ width: "100%" }}>
       <div>
@@ -187,19 +188,21 @@ const NextofKeens = ({ inputs, setInputs }) => {
                 </div>
 
                 <div class="d-flex justify-content-between">
-                  <a
+                  <button
                     class="btn btn-primary btnPrevious2 my-3"
-                    onclick="topFunction()"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigate('/')
+                    }}
                   >
                     Previous
-                  </a>
+                  </button>
                   <button
                     class="btn btn-primary btnNext2 my-3 "
                     onClick={(e) => {
                       e.preventDefault();
-                      console.log("i was here", curArr);
                       setInputs({ ...inputs, kin_array: [...curArr] });
-                      // sendData();
+                      navigate('/passport')
                     }}
                   >
                     Next

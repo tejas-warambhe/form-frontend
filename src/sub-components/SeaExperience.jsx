@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 const SeaExperience = ({ inputs, setInputs }) => {
   const [a, setA] = useState(1);
@@ -22,7 +23,7 @@ const SeaExperience = ({ inputs, setInputs }) => {
   const onFormChange = (e) => {
     setFormInputs({ ...formInputs, [e.target.name]: e.target.value });
   };
-  console.log(formInputs);
+  // console.log(formInputs);
   const sendData = async () => {
     const response = await fetch("https://marine-form-backend.herokuapp.com/upload", {
       method: "POST",
@@ -53,6 +54,7 @@ const SeaExperience = ({ inputs, setInputs }) => {
       total: "",
     });
   };
+  let navigate = useNavigate();
   return (
     <div style={{ width: "100%" }}>
       <div>
@@ -212,13 +214,13 @@ const SeaExperience = ({ inputs, setInputs }) => {
               {/* <a id="delete_row4" class="pull-left btn btn-primary">
                 Delete Row
               </a> */}
-              <a
+              <button
                 id="add_row"
                 class="btn btn-primary pull-right"
                 onClick={incrementArr}
               >
                 Submit
-              </a>
+              </button>
             </div>
             <hr />
             <div>
@@ -271,16 +273,20 @@ const SeaExperience = ({ inputs, setInputs }) => {
               })}
             </div>
             <div class="d-flex justify-content-between">
-              <a class="btn btn-primary btnPrevious15" onclick="topFunction()">
+              <button class="btn btn-primary btnPrevious15" onClick={(e) => {
+                e.preventDefault();
+                navigate('/reasonofapplication')
+              }}>
                 Previous
-              </a>
+              </button>
               <button
                 class="btn btn-primary btnNext15"
                 onClick={(e) => {
                   e.preventDefault();
-                  console.log("i was here", curArr);
+                  // console.log("i was here", curArr);
                   setInputs({ ...inputs, special_experience: curArr });
                   // sendData();
+                  navigate('/onshoreservice')
                 }}
               >
                 Next

@@ -3,7 +3,7 @@ import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
 import { useNavigate } from "react-router-dom";
 
-const ProfileDetails = ({ setInputs, inputs }) => {
+const ProfileDetailsAdmin = ({ setInputs, inputs }) => {
   const onChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
@@ -336,4 +336,4 @@ const ProfileDetails = ({ setInputs, inputs }) => {
   );
 };
 
-export default ProfileDetails;
+export default ProfileDetailsAdmin;

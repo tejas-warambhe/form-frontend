@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
 
-const ReasonOfApplication = ({ inputs, setInputs }) => {
+const ReasonOfApplicationAdmin = ({ inputs, setInputs }) => {
   const onChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
@@ -104,4 +104,4 @@ const ReasonOfApplication = ({ inputs, setInputs }) => {
   );
 };
 
-export default ReasonOfApplication;
+export default ReasonOfApplicationAdmin;

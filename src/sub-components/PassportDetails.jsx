@@ -1,10 +1,13 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 
 const PassportDetails = ({ inputs, setInputs }) => {
   const onChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
   console.log(inputs);
+
+  let navigate = useNavigate();
   return (
     <div style={{ width: "100%" }}>
       <div>
@@ -130,15 +133,21 @@ const PassportDetails = ({ inputs, setInputs }) => {
             </div>
           </div>
           <div class="d-flex justify-content-between">
-            <a
+            <button
               class="btn btn-primary btnPrevious3 my-3"
-              onclick="topFunction()"
+              onClick={(e) => {
+                e.preventDefault();
+                navigate('/dependents')
+              }}
             >
               Previous
-            </a>
-            <a class="btn btn-primary btnNext3 my-3 " onclick="topFunction()">
+            </button>
+            <button class="btn btn-primary btnNext3 my-3 " onClick={(e) => {
+              e.preventDefault();
+              navigate('/seamenbook')
+            }}>
               Next
-            </a>
+            </button>
           </div>
         </div>
       </div>

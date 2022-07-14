@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
 
-const CertificateOfCompetancy = ({ inputs, setInputs }) => {
+const CertificateOfCompetancyAdmin = ({ inputs, setInputs }) => {
   const onChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
@@ -363,4 +363,4 @@ const CertificateOfCompetancy = ({ inputs, setInputs }) => {
   );
 };
 
-export default CertificateOfCompetancy;
+export default CertificateOfCompetancyAdmin;
