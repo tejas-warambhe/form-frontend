@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Sidebar from "../components/Sidebar";
 const NextofKeens = ({ inputs, setInputs }) => {
   const [a, setA] = useState(1);
   const [curArr, setCurrArr] = useState([]);
@@ -50,6 +51,7 @@ const NextofKeens = ({ inputs, setInputs }) => {
   let navigate = useNavigate();
   return (
     <div style={{ width: "100%" }}>
+      <Sidebar/>
       <div>
         <form class="rounded-3 shadow">
           <div class="display form-heading">

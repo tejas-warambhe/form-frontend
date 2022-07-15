@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import SidebarAdmin from "../components/SideBarAdmin";
 
 const DeclarationAdmin = ({ inputs, setInputs }) => {
   const [imgFile, setImgFile] = useState({
@@ -59,6 +60,7 @@ const DeclarationAdmin = ({ inputs, setInputs }) => {
 
   return (
     <div style={{ width: "100%" }}>
+      <SidebarAdmin />
       <div>
         <div class="rounded-5 shadow p-4">
           <h4>DECLARATION </h4>

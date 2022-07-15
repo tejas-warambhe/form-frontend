@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
+import Sidebar from "../components/Sidebar";
 
 const StcwOtherCertificates = ({ inputs, setInputs }) => {
   let navigate = useNavigate();
@@ -8,6 +9,7 @@ const StcwOtherCertificates = ({ inputs, setInputs }) => {
   };
   return (
     <div style={{ width: "100%" }}>
+      <Sidebar />
       <div>
         <div class="rounded-5 shadow p-3">
           <div class="container-100">

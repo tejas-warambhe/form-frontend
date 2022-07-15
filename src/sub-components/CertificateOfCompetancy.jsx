@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
+import Sidebar from "../components/Sidebar";
 
 const CertificateOfCompetancy = ({ inputs, setInputs }) => {
   const onChange = (e) => {
@@ -9,6 +10,7 @@ const CertificateOfCompetancy = ({ inputs, setInputs }) => {
 
   return (
     <div style={{ width: "100%" }}>
+      <Sidebar/ >
       <div>
         <div class="p-4 rounded-3 shadow">
           <div class="container-90 display form-heading">

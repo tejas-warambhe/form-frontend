@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
+import Sidebar from "../components/Sidebar";
 
 const AcademicQualifications = ({ inputs, setInputs }) => {
   const onChange = (e) => {
@@ -8,6 +9,7 @@ const AcademicQualifications = ({ inputs, setInputs }) => {
   let navigate = useNavigate();
   return (
     <div style={{ width: "100%" }}>
+      <Sidebar/>
       <div>
         <div class="p-4 rounded-3 shadow">
           <div class="container-90 display form-heading">

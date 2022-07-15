@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import Sidebar from "../components/Sidebar";
 
 const Declaration = ({ inputs, setInputs }) => {
   const [imgFile, setImgFile] = useState({
@@ -59,6 +60,7 @@ const Declaration = ({ inputs, setInputs }) => {
 
   return (
     <div style={{ width: "100%" }}>
+      <Sidebar/>
       <div>
         <div class="rounded-5 shadow p-4">
           <h4>DECLARATION </h4>

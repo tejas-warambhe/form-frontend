@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import SidebarAdmin from "../components/SideBarAdmin";
 
 const ShoreAdmin = ({ inputs, setInputs, getDetails }) => {
   const [a, setA] = useState(1);
@@ -53,6 +54,7 @@ const ShoreAdmin = ({ inputs, setInputs, getDetails }) => {
   }, [])
   return (
     <div style={{ width: "100%" }}>
+      <SidebarAdmin />
       <div>
         <div class="rounded-5 shadow p-4">
           <div class="container-90 display form-heading">

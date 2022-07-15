@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import SidebarAdmin from "../components/SideBarAdmin";
 
 const NextOfKinsAdmin = ({ inputs, setInputs, getDetails }) => {
   const [a, setA] = useState(1);
@@ -55,6 +56,7 @@ const NextOfKinsAdmin = ({ inputs, setInputs, getDetails }) => {
 
   return (
     <div style={{ width: "100%" }}>
+      <SidebarAdmin />
       <div>
         <form class="rounded-3 shadow">
           <div class="display form-heading">

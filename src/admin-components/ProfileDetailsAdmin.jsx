@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
 import { useNavigate } from "react-router-dom";
+import SidebarAdmin from "../components/SideBarAdmin";
 
 const ProfileDetailsAdmin = ({ setInputs, inputs }) => {
   const onChange = (e) => {
@@ -23,6 +24,7 @@ const ProfileDetailsAdmin = ({ setInputs, inputs }) => {
 //   console.log(inputs);
   return (
     <div style={{width: "100%"}}>
+      <SidebarAdmin />
       <div class="tab-content col-md-12" id="v-pills-tabContent">
         <div
           class="tab-pane fade show active"

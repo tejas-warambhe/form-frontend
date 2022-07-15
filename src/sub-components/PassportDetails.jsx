@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
+import Sidebar from "../components/Sidebar";
 
 const PassportDetails = ({ inputs, setInputs }) => {
   const onChange = (e) => {
@@ -10,6 +11,7 @@ const PassportDetails = ({ inputs, setInputs }) => {
   let navigate = useNavigate();
   return (
     <div style={{ width: "100%" }}>
+      <Sidebar/>
       <div>
         <div class="p-4 rounded-3 shadow">
           <div class="display form-heading container-90">

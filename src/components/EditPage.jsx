@@ -27,7 +27,7 @@ function EditPage() {
     special_experience: [],
   });
   const getDetails = async () => {
-    const query = searchParams.get("q");
+    const query = localStorage.marine_form_id;
     const response = await fetch(
       `https://marine-form-backend.herokuapp.com/admin/form/${query}`,
       {
@@ -48,7 +48,7 @@ function EditPage() {
 
   const updateForm = async (e) => {
     e.preventDefault();
-    const query = searchParams.get("q");
+    const query = localStorage.marine_form_id;
     const response = await fetch(
       `https://marine-form-backend.herokuapp.com/admin/form/update/${query}`,
       {
