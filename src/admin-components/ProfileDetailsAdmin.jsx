@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
 import { useNavigate } from "react-router-dom";
@@ -9,20 +9,58 @@ const ProfileDetailsAdmin = ({ setInputs, inputs }) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
   let navigate = useNavigate();
-  const sendData = async () => {
-    const response = await fetch("https://marine-form-backend.herokuapp.com/upload",{
-        method: "POST",
+  
+  const [loading, setLoading] = useState(true);
+  // const [inputs, setInputs] = useState({
+  //   kin_array: [],
+  //   on_shore: [],
+  //   special_experience: [],
+  // });
+  const getDetails = async () => {
+    const query = localStorage.marine_form_id;
+    console.log(query);
+    const response = await fetch(
+      `https://marine-form-backend.herokuapp.com/admin/form/${query}`,
+      {
+        method: "GET",
         headers: {
-            "Content-Type" : "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(inputs)
-    })
+      }
+    );
+    const parseRes = await response.json();
+    setInputs(parseRes);
+    setLoading(false);
+  };
+  // getDetails();
+  //not needed here
+  const updateForm = async (e) => {
+    e.preventDefault();
+    const query = localStorage.marine_form_id;
+    
+    const response = await fetch(
+      `https://marine-form-backend.herokuapp.com/admin/form/update/${query}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(inputs),
+      }
+    );
+
     const parseRes = await response.json();
     console.log(parseRes);
-  }
+  };
 
+  useEffect(() => {
+    getDetails();
+  }, []);
 //   console.log(inputs);
   return (
+    loading ? (
+      <div>Loading</div>
+    ) : (
     <div class="d-flex ms-3 py-3 flex-row-reverse">
       <SidebarAdmin />
       <div class="tab-content col-md-9" id="v-pills-tabContent" >
@@ -334,7 +372,7 @@ const ProfileDetailsAdmin = ({ setInputs, inputs }) => {
           </form>
         </div>
       </div>
-    </div>
+    </div>)
   );
 };
 

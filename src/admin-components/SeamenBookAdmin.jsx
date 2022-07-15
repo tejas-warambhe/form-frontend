@@ -67,8 +67,8 @@ const SeamenBookAdmin = ({ inputs, setInputs }) => {
                     <th class="table-info">PANAMA</th>
                     <td>
                       <input
-                        value={inputs.passport_no}
-                        name="passport_no"
+                        value={inputs.panama_certificate_no}
+                        name="panama_certificate_no"
                         onChange={(e) => onChange(e)}
                       />
                     </td>

@@ -5,8 +5,8 @@ import SidebarAdmin from "../components/SideBarAdmin";
 
 const DeclarationAdmin = ({ inputs, setInputs }) => {
   const [imgFile, setImgFile] = useState({
-    formal_photo: "",
-    signature_photo: "",
+    formal_photo: inputs.formal_photo,
+    signature_photo: inputs.signature_photo,
   });
   const navigate = useNavigate();
   const [file, setFile] = useState({
@@ -46,20 +46,24 @@ const DeclarationAdmin = ({ inputs, setInputs }) => {
     console.log(inputs.formal_photo);
   };
 
-  const sendData = async (e) => {
+  const updateForm = async (e) => {
     e.preventDefault();
+    const query = localStorage.marine_form_id;
+    
+    const response = await fetch(
+      `https://marine-form-backend.herokuapp.com/admin/form/update/${query}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(inputs),
+      }
+    );
 
-    const response = await fetch("https://marine-form-backend.herokuapp.com/upload", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(inputs),
-    });
     const parseRes = await response.json();
     console.log(parseRes);
   };
-
   return (
     <div className="d-flex ms-3 py-3 flex-row-reverse">
       <SidebarAdmin />
@@ -158,10 +162,10 @@ const DeclarationAdmin = ({ inputs, setInputs }) => {
               type="submit"
               title="Send"
               onClick={(e) => {
-                sendData(e);
+                updateForm(e);
               }}
             >
-              Send
+              Edit
             </button>
           </div>
         </div>

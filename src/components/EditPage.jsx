@@ -28,6 +28,7 @@ function EditPage({inputs,setInputs}) {
   // });
   const getDetails = async () => {
     const query = localStorage.marine_form_id;
+    console.log(query);
     const response = await fetch(
       `https://marine-form-backend.herokuapp.com/admin/form/${query}`,
       {
@@ -49,6 +50,7 @@ function EditPage({inputs,setInputs}) {
   const updateForm = async (e) => {
     e.preventDefault();
     const query = localStorage.marine_form_id;
+    
     const response = await fetch(
       `https://marine-form-backend.herokuapp.com/admin/form/update/${query}`,
       {

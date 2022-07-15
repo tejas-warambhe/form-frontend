@@ -3,7 +3,7 @@ import SidebarAdmin from "../components/SideBarAdmin";
 import { useNavigate } from "react-router-dom";
 const OnShoreServiceAdmin = ({ inputs, setInputs }) => {
   const [a, setA] = useState(1);
-  const [curArr, setCurrArr] = useState([]);
+  const [curArr, setCurrArr] = useState(inputs.on_shore);
   const [formInputs, setFormInputs] = useState({
     Employer: "",
     Title: "",
