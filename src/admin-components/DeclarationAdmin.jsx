@@ -5,8 +5,8 @@ import SidebarAdmin from "../components/SideBarAdmin";
 
 const DeclarationAdmin = ({ inputs, setInputs }) => {
   const [imgFile, setImgFile] = useState({
-    formal_photo: inputs.formal_photo,
-    signature_photo: inputs.signature_photo,
+    formal_photo: "",
+    signature_photo: "",
   });
   const navigate = useNavigate();
   const [file, setFile] = useState({
@@ -46,24 +46,20 @@ const DeclarationAdmin = ({ inputs, setInputs }) => {
     console.log(inputs.formal_photo);
   };
 
-  const updateForm = async (e) => {
+  const sendData = async (e) => {
     e.preventDefault();
-    const query = localStorage.marine_form_id;
-    
-    const response = await fetch(
-      `https://marine-form-backend.herokuapp.com/admin/form/update/${query}`,
-      {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(inputs),
-      }
-    );
 
+    const response = await fetch("https://marine-form-backend.herokuapp.com/upload", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(inputs),
+    });
     const parseRes = await response.json();
     console.log(parseRes);
   };
+
   return (
     <div className="d-flex ms-3 py-3 flex-row-reverse">
       <SidebarAdmin />
@@ -158,18 +154,43 @@ const DeclarationAdmin = ({ inputs, setInputs }) => {
               Previous
               </button>
             <button
-              class="btn btn-success nautical-submit"
+                href="#myModal"  data-toggle="modal"
+                class="btn btn-success nautical-submit trigger-btn"
               type="submit"
               title="Send"
               onClick={(e) => {
-                updateForm(e);
+                sendData(e);
               }}
             >
-              Edit
+              Send
             </button>
           </div>
         </div>
       </div>
+      {/* modal */}
+      <div id="myModal" class="modal fade" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-confirm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="icon-box">
+                <i class="material-icons">&#xE876;</i>
+              </div>				
+              <h4 class="modal-title w-100">Awesome!</h4>	
+            </div>
+            <div class="modal-body">
+              <p class="text-center">Your Form has been Edited Successfully </p>
+            </div>
+            <div class="modal-footer"
+           
+            >
+              <a class="btn btn-success btn-block"
+              href="https://nauticalglobal.com/index.html" 
+              >OK</a>
+            </div>
+          </div>
+        </div>
+      </div> 
+      {/* modal */}
     </div>
   );
 };

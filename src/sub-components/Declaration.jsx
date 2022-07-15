@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
-
+import { useNavigate } from "react-router-dom";
 const Declaration = ({ inputs, setInputs }) => {
   const [imgFile, setImgFile] = useState({
     formal_photo: "",
@@ -20,7 +20,7 @@ const Declaration = ({ inputs, setInputs }) => {
     setFile({ ...file, [event.target.name]: event.target.files });
     console.log(file.formal_photo);
   };
-
+  const navigate=useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData();
@@ -147,7 +147,8 @@ const Declaration = ({ inputs, setInputs }) => {
           <div class="end-tab">
             <a class="btn btn-primary btnPrevious17">Previous</a>
             <button
-              class="btn btn-success nautical-submit"
+              href="#myModal"  data-toggle="modal"
+              class="btn btn-success nautical-submit trigger-btn"
               type="submit"
               title="Send"
               onClick={(e) => {
@@ -159,6 +160,30 @@ const Declaration = ({ inputs, setInputs }) => {
           </div>
         </div>
       </div>
+
+      {/* modal */}
+      <div id="myModal" class="modal fade" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-confirm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="icon-box">
+                <i class="material-icons">&#xE876;</i>
+              </div>				
+              <h4 class="modal-title w-100">Awesome!</h4>	
+            </div>
+            <div class="modal-body">
+              <p class="text-center">Your Form has been Submitted Successfully </p>
+            </div>
+            <div class="modal-footer"
+           
+            >
+              <a class="btn btn-success btn-block"
+              href="https://nauticalglobal.com/index.html" 
+              >OK</a>
+            </div>
+          </div>
+        </div>
+      </div>     
     </div>
   );
 };
