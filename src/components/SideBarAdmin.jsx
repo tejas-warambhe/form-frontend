@@ -7,7 +7,7 @@ const SidebarAdmin = () => {
     <div>
         <div>
                     <form className="top-sticky"  >
-                        <div className="d-flex ms-3 py-3 flex-row-reverse">
+                        <div className="d-flex ms-3 flex-row-reverse">
                             <div className="aside-tabs">
                                 <div className="nav flex-column nav-pills m-3 aside-tabs-scrolled" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                                     <Link to={'/admin/edit/profile'}><button className="newbtn nav-link">Profile Details</button></Link>

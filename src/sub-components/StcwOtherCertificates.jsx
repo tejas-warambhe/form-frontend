@@ -8,9 +8,9 @@ const StcwOtherCertificates = ({ inputs, setInputs }) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
   return (
-    <div style={{ width: "100%" }}>
+    <div className="d-flex ms-3 py-3 flex-row-reverse">
       <Sidebar />
-      <div>
+      <div style={{ width: "100%" }}>
         <div class="rounded-5 shadow p-3">
           <div class="container-100">
             <div class="display form-heading">

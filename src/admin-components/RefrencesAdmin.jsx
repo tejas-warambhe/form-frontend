@@ -9,9 +9,9 @@ const RefrencesAdmin = ({ inputs, setInputs }) => {
   let navigate = useNavigate();
 
   return (
-    <div style={{ width: "100%" }}>
+    <div className="d-flex ms-3 py-3 flex-row-reverse">
       <SidebarAdmin />
-      <div>
+      <div style={{ width: "100%" }}>
         <div class="rounded-3 shadow p-4">
           <div class="container-90 display form-heading">
             <h4>REFERENCES</h4>
@@ -105,14 +105,14 @@ const RefrencesAdmin = ({ inputs, setInputs }) => {
                 class="btn btn-primary btnPrevious8 my-3"
                 onClick={(e) => {
                   e.preventDefault();
-                  navigate('/stcwandothercertificates')
+                  navigate('/admin/edit/stcwandothercertificates')
                 }}
               >
                 Previous
               </button>
               <button class="btn btn-primary btnNext8 my-3 " onClick={(e) => {
                 e.preventDefault();
-                navigate('/howyouknowus');
+                navigate('/admin/edit/howyouknowus');
               }}>
                 Next
               </button>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import ShoreAdmin from "../admin-components/ShoreAdmin";
+// import ShoreAdmin from "../admin-components/ShoreAdmin";
 
 import { useSearchParams } from "react-router-dom";
 import NextOfKinsAdmin from "../admin-components/NextOfKinsAdmin";
@@ -18,14 +18,14 @@ import AdditionalDetailsAdmin from "../admin-components/AdditionalDetailsAdmin";
 import ReasonOfApplicationAdmin from "../admin-components/ReasonOfApplicationAdmin";
 import DeclarationAdmin from "../admin-components/DeclarationAdmin";
 
-function EditPage() {
+function EditPage({inputs,setInputs}) {
   const [searchParams, setSearchParams] = useSearchParams();
   const [loading, setLoading] = useState(true);
-  const [inputs, setInputs] = useState({
-    kin_array: [],
-    on_shore: [],
-    special_experience: [],
-  });
+  // const [inputs, setInputs] = useState({
+  //   kin_array: [],
+  //   on_shore: [],
+  //   special_experience: [],
+  // });
   const getDetails = async () => {
     const query = localStorage.marine_form_id;
     const response = await fetch(
@@ -72,7 +72,7 @@ function EditPage() {
     <div>Loading</div>
   ) : (
     <div>
-      <ProfileDetailsAdmin setInputs={setInputs} inputs={inputs} />
+      {/* <ProfileDetailsAdmin setInputs={setInputs} inputs={inputs} />
       <NextOfKinsAdmin
         setInputs={setInputs}
         inputs={inputs}
@@ -98,7 +98,7 @@ function EditPage() {
         inputs={inputs}
         getDetails={getDetails}
       />
-      <DeclarationAdmin setInputs={setInputs} inputs={inputs} />
+      <DeclarationAdmin setInputs={setInputs} inputs={inputs} /> */}
       <button className="btn btn-primary" onClick={(e) => updateForm(e)}>
         {" "}
         Edit{" "}

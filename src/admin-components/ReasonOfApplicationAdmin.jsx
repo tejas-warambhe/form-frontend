@@ -9,9 +9,9 @@ const ReasonOfApplicationAdmin = ({ inputs, setInputs }) => {
   let navigate = useNavigate();
 
   return (
-    <div style={{ width: "100%" }}>
+    <div className="d-flex ms-3 py-3 flex-row-reverse">
       <SidebarAdmin />
-      <div>
+      <div style={{ width: "100%" }}>
         <div class="rounded-5 shadow p-4 ">
           <div class="container-90 display form-heading ">
             <h4>REASON FOR APPLICATION </h4>
@@ -89,13 +89,13 @@ const ReasonOfApplicationAdmin = ({ inputs, setInputs }) => {
           <div class="d-flex justify-content-between">
             <button class="btn btn-primary btnPrevious14" onClick={(e) => {
               e.preventDefault();
-              navigate('/additionalinformation');
+              navigate('/admin/edit/additionalinformation');
             }}>
               Previous
             </button>
             <button class="btn btn-primary btnNext14" onClick={(e) => {
               e.preventDefault();
-              navigate('/seaexperience');
+              navigate('/admin/edit/seaexperience');
             }}>
               Next
             </button>

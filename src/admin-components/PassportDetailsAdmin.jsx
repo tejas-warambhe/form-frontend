@@ -10,9 +10,9 @@ const PassportDetailsAdmin = ({ inputs, setInputs }) => {
 
   let navigate = useNavigate();
   return (
-    <div style={{ width: "100%" }}>
+    <div className="d-flex ms-3 py-3 flex-row-reverse">
       <SidebarAdmin />
-      <div>
+      <div style={{ width: "100%" }}>
         <div class="p-4 rounded-3 shadow">
           <div class="display form-heading container-90">
             <h4>PASSPORT DETAILS</h4>
@@ -139,14 +139,14 @@ const PassportDetailsAdmin = ({ inputs, setInputs }) => {
               class="btn btn-primary btnPrevious3 my-3"
               onClick={(e) => {
                 e.preventDefault();
-                navigate('/dependents')
+                navigate('/admin/edit/dependents')
               }}
             >
               Previous
             </button>
             <button class="btn btn-primary btnNext3 my-3 " onClick={(e) => {
               e.preventDefault();
-              navigate('/seamenbook')
+              navigate('/admin/edit/seamenbook')
             }}>
               Next
             </button>

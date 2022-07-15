@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import SidebarAdmin from "../components/SideBarAdmin";
 
-const SeaExperienceAdmin = ({ inputs, setInputs, getDetails }) => {
+const SeaExperienceAdmin = ({ inputs, setInputs }) => {
   const [a, setA] = useState(1);
   const [curArr, setCurrArr] = useState(inputs.special_experience);
   const [formInputs, setFormInputs] = useState({
@@ -19,7 +20,7 @@ const SeaExperienceAdmin = ({ inputs, setInputs, getDetails }) => {
     total: "",
   });
   const [arr, setArr] = useState([0]);
-
+  const navigate = useNavigate();
   const onFormChange = (e) => {
     setFormInputs({ ...formInputs, [e.target.name]: e.target.value });
   };
@@ -55,12 +56,12 @@ const SeaExperienceAdmin = ({ inputs, setInputs, getDetails }) => {
     });
   };
   useEffect(() => {
-    getDetails();
+    // getDetails();
   }, [])
   return (
-    <div style={{ width: "100%" }}>
+    <div className="d-flex ms-3 py-3 flex-row-reverse">
       <SidebarAdmin />
-      <div>
+      <div style={{ width: "100%" }}>
         <div class="rounded-5 shadow p-4 ">
           <div class="container-90 display form-heading ">
             <h4>SEA EXPERIENCE: (Most recent at Top) Special Experience</h4>
@@ -276,7 +277,10 @@ const SeaExperienceAdmin = ({ inputs, setInputs, getDetails }) => {
               })}
             </div>
             <div class="d-flex justify-content-between">
-              <a class="btn btn-primary btnPrevious15" onclick="topFunction()">
+              <a class="btn btn-primary btnPrevious15" onClick={(e)=>{
+                e.preventDefault();
+                navigate('/admin/edit/reasonofapplication')
+              }}>
                 Previous
               </a>
               <button
@@ -285,6 +289,7 @@ const SeaExperienceAdmin = ({ inputs, setInputs, getDetails }) => {
                   e.preventDefault();
                   console.log("i was here", curArr);
                   setInputs({ ...inputs, special_experience: curArr });
+                  navigate('/admin/edit/onshoreservice')
                 //   sendData();
                 }}
               >

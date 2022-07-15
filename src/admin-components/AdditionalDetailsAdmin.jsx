@@ -9,9 +9,9 @@ const AdditionalDetailsAdmin = ({ inputs, setInputs }) => {
   let navigate = useNavigate();
 
   return (
-    <div style={{ width: "100%" }}>
+    <div className="d-flex ms-3 py-3 flex-row-reverse">
       <SidebarAdmin />
-      <div>
+      <div style={{ width: "100%" }}>
         <div class="rounded-5 shadow p-4 ">
           <div class="container-90 display form-heading ">
             <h4>ADDITIONAL INFORMATION</h4>
@@ -139,13 +139,13 @@ const AdditionalDetailsAdmin = ({ inputs, setInputs }) => {
           <div class="d-flex justify-content-between ">
             <button class="btn btn-primary btnPrevious13" onClick={(e) => {
               e.preventDefault();
-              navigate('/personaldetails');
+              navigate('/admin/edit/personaldetails');
             }}>
               Previous
             </button>
             <button class="btn btn-primary btnNext13" onClick={(e) => {
               e.preventDefault();
-              navigate('/reasonofapplication')
+              navigate('/admin/edit/reasonofapplication')
             }}>
               Next
             </button>

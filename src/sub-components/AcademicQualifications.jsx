@@ -8,9 +8,9 @@ const AcademicQualifications = ({ inputs, setInputs }) => {
   };
   let navigate = useNavigate();
   return (
-    <div style={{ width: "100%" }}>
+    <div className="d-flex ms-3 py-3 flex-row-reverse">
       <Sidebar/>
-      <div>
+      <div style={{width:"100%"}}>
         <div class="p-4 rounded-3 shadow">
           <div class="container-90 display form-heading">
             <h4>ACADEMIC QUALIFICATIONS</h4>

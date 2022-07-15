@@ -8,9 +8,9 @@ const StcwOtherCertificatesAdmin = ({ inputs, setInputs }) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
   return (
-    <div style={{ width: "100%" }}>
+    <div className="d-flex ms-3 py-3 flex-row-reverse">
       <SidebarAdmin />
-      <div>
+      <div style={{ width: "100%" }}>
         <div class="rounded-5 shadow p-3">
           <div class="container-100">
             <div class="display form-heading">
@@ -1621,7 +1621,7 @@ const StcwOtherCertificatesAdmin = ({ inputs, setInputs }) => {
                 class="btn btn-primary btnPrevious7 my-3"
                 onClick={(e) => {
                   e.preventDefault();
-                  navigate('/certificateofcompetency');
+                  navigate('/admin/edit/certificateofcompetency');
                 }}
               >
                 Previous
@@ -1629,7 +1629,7 @@ const StcwOtherCertificatesAdmin = ({ inputs, setInputs }) => {
               <button class="btn btn-primary btnNext7 my-3 " 
               onClick={(e) => {
                 e.preventDefault();
-                navigate('/refrences')
+                navigate('/admin/edit/refrences')
               }}>
                 Next
               </button>

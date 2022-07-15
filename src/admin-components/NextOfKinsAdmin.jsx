@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SidebarAdmin from "../components/SideBarAdmin";
-
+import { useNavigate } from "react-router-dom";
 const NextOfKinsAdmin = ({ inputs, setInputs, getDetails }) => {
   const [a, setA] = useState(1);
   console.log(inputs.kin_array, "here cow");
@@ -48,16 +48,16 @@ const NextOfKinsAdmin = ({ inputs, setInputs, getDetails }) => {
     }
   };
   console.log(inputs);
-
+  const navigate=useNavigate();
   // useEffect( async () => {
   //   await getDetails();
     
   // }, [])
 
   return (
-    <div style={{ width: "100%" }}>
+    <div className="d-flex ms-3 py-3 flex-row-reverse">
       <SidebarAdmin />
-      <div>
+      <div style={{ width: "100%" }}>
         <form class="rounded-3 shadow">
           <div class="display form-heading">
             <h4 class="p-4 pb-0">NEXT OF KIN / DEPENDENTS</h4>
@@ -195,12 +195,16 @@ const NextOfKinsAdmin = ({ inputs, setInputs, getDetails }) => {
                 </div>
 
                 <div class="d-flex justify-content-between">
-                  <a
+                  <button
                     class="btn btn-primary btnPrevious2 my-3"
-                    onclick="topFunction()"
+                    onClick={(e)=>{
+                      e.preventDefault();
+                      navigate("/admin/edit/profile");
+                    }}
+                    
                   >
                     Previous
-                  </a>
+                  </button>
                   <button
                     class="btn btn-primary btnNext2 my-3 "
                     onClick={(e) => {
@@ -208,6 +212,7 @@ const NextOfKinsAdmin = ({ inputs, setInputs, getDetails }) => {
                       console.log("i was here", curArr);
                       setInputs({ ...inputs, kin_array: [...curArr] });
                     //   sendData();
+                    navigate("/admin/edit/passport");
                     }}
                   >
                     Next

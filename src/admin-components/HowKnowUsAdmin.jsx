@@ -8,9 +8,9 @@ const HowKnowUsAdmin = ({ inputs, setInputs }) => {
   };
   let navigate = useNavigate();
   return (
-    <div style={{ width: "100%" }}>
+    <div className="d-flex ms-3 py-3 flex-row-reverse"> 
       <SidebarAdmin />
-      <div>
+      <div style={{ width: "100%" }}>
         <div class="rounded-3 shadow p-4">
           <div class="container-90 display form-heading">
             <h4>HOW DID YOU COME TO KNOW ABOUT US?</h4>
@@ -133,7 +133,7 @@ const HowKnowUsAdmin = ({ inputs, setInputs }) => {
               class="btn btn-primary btnPrevious9 my-3 "
               onClick={(e) => {
                 e.preventDefault();
-                navigate("/refrences");
+                navigate("/admin/edit/refrences");
               }}
             >
               Previous
@@ -142,7 +142,7 @@ const HowKnowUsAdmin = ({ inputs, setInputs }) => {
               class="btn btn-primary btnNext9 my-3 "
               onClick={(e) => {
                 e.preventDefault();
-                navigate("/personaldetails");
+                navigate("/admin/edit/personaldetails");
               }}
             >
               Next

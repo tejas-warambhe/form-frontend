@@ -59,9 +59,9 @@ const Declaration = ({ inputs, setInputs }) => {
   };
 
   return (
-    <div style={{ width: "100%" }}>
+    <div className="d-flex ms-3 py-3 flex-row-reverse">
       <Sidebar/>
-      <div>
+      <div style={{ width: "100%" }}>
         <div class="rounded-5 shadow p-4">
           <h4>DECLARATION </h4>
           <br />

@@ -35,7 +35,7 @@ import PersonalDetailsAdmin from "./admin-components/PersonalDetailsAdmin";
 import AdditionalDetailsAdmin from "./admin-components/AdditionalDetailsAdmin";
 import ReasonOfApplicationAdmin from "./admin-components/ReasonOfApplicationAdmin";
 import SeaExperienceAdmin from "./admin-components/SeaExperienceAdmin";
-import ShoreAdmin from "./admin-components/ShoreAdmin";
+import OnShoreServiceAdmin from "./admin-components/OnShoreServiceAdmin";
 import DeclarationAdmin from "./admin-components/DeclarationAdmin";
 function App() {
 
@@ -46,6 +46,12 @@ function App() {
         last_name: "",
         middle_name:"",
         kin_array: []
+    });
+    const [inputs1, setInputs1] = useState({
+        kin_array: [],
+        on_shore: [],
+        special_experience: [],
+          
     });
     return (
         <Router>
@@ -72,23 +78,23 @@ function App() {
                                 <Route exact path="/onshoreservice" element={<OnShoreService setInputs={setInputs} inputs={inputs}/>} />
                                 <Route exact path="/declaration" element={<Declaration setInputs={setInputs} inputs={inputs}/>} />
                                 {/* admin starts */}
-                                <Route exact path="/admin/edit" element={<EditPage/>} />
-                                <Route exact path="/admin" element={<Admin/>}/>
-                                <Route exact path="/admin/edit/profile" element={<ProfileDetailsAdmin />} />
-                                <Route exact path="/admin/edit/dependents" element={<NextOfKinsAdmin  />} />
-                                <Route exact path="/admin/edit/passport" element={<PassportDetailsAdmin />} />
-                                <Route exact path="/admin/edit/seamenbook" element={<SeamenBookAdmin />} />
-                                <Route exact path="/admin/edit/academicQualifications" element={<AcademicQualificationsAdmin />} />
-                                <Route exact path="/admin/edit/certificateofcompetency" element={<CertificateOfCompetancyAdmin />} />
-                                <Route exact path="/admin/edit/stcwandothercertificates" element={<StcwOtherCertificatesAdmin />} />
-                                <Route exact path="/admin/edit/refrences" element={<RefrencesAdmin/>} />
-                                <Route exact path="/admin/edit/howyouknowus" element={<HowKnowUsAdmin/>}  />
-                                <Route exact path="/admin/edit/personaldetails" element={<PersonalDetailsAdmin />} />
-                                <Route exact path="/admin/edit/additionalinformation" element={<AdditionalDetailsAdmin/>} />
-                                <Route exact path="/admin/edit/reasonofapplication" element={<ReasonOfApplicationAdmin />} />
-                                <Route exact path="/admin/edit/seaexperience" element={<SeaExperienceAdmin />} />
-                                <Route exact path="/admin/edit/onshoreservice" element={<ShoreAdmin />} />
-                                <Route exact path="/admin/edit/declaration" element={<DeclarationAdmin/>} />
+                                <Route exact path="/admin/edit" element={<EditPage setInputs={setInputs1} inputs={inputs1}/>} />
+                                <Route exact path="/admin" element={<Admin setInputs={setInputs1} inputs={inputs1}/>}/>
+                                <Route exact path="/admin/edit/profile" element={<ProfileDetailsAdmin setInputs={setInputs1} inputs={inputs1} />} />
+                                <Route exact path="/admin/edit/dependents" element={<NextOfKinsAdmin  setInputs={setInputs1} inputs={inputs1}/>} />
+                                <Route exact path="/admin/edit/passport" element={<PassportDetailsAdmin setInputs={setInputs1} inputs={inputs1}/>} />
+                                <Route exact path="/admin/edit/seamenbook" element={<SeamenBookAdmin setInputs={setInputs1} inputs={inputs1} />} />
+                                <Route exact path="/admin/edit/academicQualifications" element={<AcademicQualificationsAdmin setInputs={setInputs1} inputs={inputs1}/>} />
+                                <Route exact path="/admin/edit/certificateofcompetency" element={<CertificateOfCompetancyAdmin setInputs={setInputs1} inputs={inputs1}/>} />
+                                <Route exact path="/admin/edit/stcwandothercertificates" element={<StcwOtherCertificatesAdmin setInputs={setInputs1} inputs={inputs1}/>} />
+                                <Route exact path="/admin/edit/refrences" element={<RefrencesAdmin setInputs={setInputs1} inputs={inputs1}/>} />
+                                <Route exact path="/admin/edit/howyouknowus" element={<HowKnowUsAdmin setInputs={setInputs1} inputs={inputs1}/>}  />
+                                <Route exact path="/admin/edit/personaldetails" element={<PersonalDetailsAdmin setInputs={setInputs1} inputs={inputs1}/>} />
+                                <Route exact path="/admin/edit/additionalinformation" element={<AdditionalDetailsAdmin setInputs={setInputs1} inputs={inputs1}/>} />
+                                <Route exact path="/admin/edit/reasonofapplication" element={<ReasonOfApplicationAdmin setInputs={setInputs1} inputs={inputs1}/>} />
+                                <Route exact path="/admin/edit/seaexperience" element={<SeaExperienceAdmin setInputs={setInputs1} inputs={inputs1}/>} />
+                                <Route exact path="/admin/edit/onshoreservice" element={<OnShoreServiceAdmin setInputs={setInputs1} inputs={inputs1}/>} />
+                                <Route exact path="/admin/edit/declaration" element={<DeclarationAdmin setInputs={setInputs1} inputs={inputs1}/>} />
                             </Routes>
 
 

@@ -50,9 +50,9 @@ const NextofKeens = ({ inputs, setInputs }) => {
 
   let navigate = useNavigate();
   return (
-    <div style={{ width: "100%" }}>
+    <div className="d-flex ms-3 py-3 flex-row-reverse" >
       <Sidebar/>
-      <div>
+      <div style={{width:"100%"}}>
         <form class="rounded-3 shadow">
           <div class="display form-heading">
             <h4 class="p-4 pb-0">NEXT OF KIN / DEPENDENTS</h4>

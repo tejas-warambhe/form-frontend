@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -34,7 +33,8 @@ function FormDetailsCard({ name, present_rank, rank_applied, id, getForms }) {
           <button onClick={(e) => {
             e.preventDefault();
             //edit page
-            navigate(`/admin/edit?q=${id}`);
+            localStorage.setItem('marine_form_id', id);
+            navigate("/admin/edit/profile");
           }} class="btn btn-warning">
             Edit  
           </button>

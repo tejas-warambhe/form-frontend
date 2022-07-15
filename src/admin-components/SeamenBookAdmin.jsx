@@ -9,9 +9,9 @@ const SeamenBookAdmin = ({ inputs, setInputs }) => {
   console.log(inputs);
   let navigate = useNavigate();
   return (
-    <div style={{ width: "100%" }}>
+    <div className="d-flex ms-3 py-3 flex-row-reverse">
       <SidebarAdmin />
-      <div>
+      <div style={{ width: "100%" }}>
         <div class=" p-4 rounded-3 shadow">
           <div class="container-90 display form-heading">
             <h4>CONTINUOUS DISCHARGE CERTIFICATE / SEAMEN BOOK</h4>
@@ -139,14 +139,14 @@ const SeamenBookAdmin = ({ inputs, setInputs }) => {
               class="btn btn-primary btnPrevious4 my-3"
               onClick={(e) => {
                 e.preventDefault();
-                navigate('/passport')
+                navigate('/admin/edit/passport')
               }}
             >
               Previous
             </button>
             <button class="btn btn-primary btnNext4 my-3 " onClick={(e) => {
               e.preventDefault();
-              navigate('/academicQualifications?q={}');
+              navigate('/admin/edit/academicQualifications?q={}');
             }}>
               Next
             </button>

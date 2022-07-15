@@ -23,9 +23,9 @@ const ProfileDetailsAdmin = ({ setInputs, inputs }) => {
 
 //   console.log(inputs);
   return (
-    <div style={{width: "100%"}}>
+    <div class="d-flex ms-3 py-3 flex-row-reverse">
       <SidebarAdmin />
-      <div class="tab-content col-md-12" id="v-pills-tabContent">
+      <div class="tab-content col-md-9" id="v-pills-tabContent" >
         <div
           class="tab-pane fade show active"
           id="v-pills-profile"
@@ -326,7 +326,7 @@ const ProfileDetailsAdmin = ({ setInputs, inputs }) => {
 
                   <hr />
                   <a class="btn btn-primary btnNext mb-4 pull-right" onClick={()=>{
-                    navigate('/dependents');
+                    navigate('/admin/edit/dependents');
                   }}>Next</a>
                 </div>
               </div>

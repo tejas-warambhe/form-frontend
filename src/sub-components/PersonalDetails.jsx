@@ -8,9 +8,9 @@ const PersonalDetails = ({ inputs, setInputs }) => {
   };
   let navigate = useNavigate();
   return (
-    <div style={{ width: "100%" }}>
+    <div className="d-flex ms-3 py-3 flex-row-reverse">
       <Sidebar/>
-      <div>
+      <div style={{ width: "100%" }}>
         <div class="rounded-3 shadow p-4">
           <div class="container-90 display form-heading">
             <h4>PERSONAL DETAILS</h4>

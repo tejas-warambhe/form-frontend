@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SidebarAdmin from "../components/SideBarAdmin";
-
+import { useNavigate } from "react-router-dom";
 const OnShoreServiceAdmin = ({ inputs, setInputs }) => {
   const [a, setA] = useState(1);
   const [curArr, setCurrArr] = useState([]);
@@ -16,7 +16,7 @@ const OnShoreServiceAdmin = ({ inputs, setInputs }) => {
     any_useful_info: "",
   });
   const [arr, setArr] = useState([0]);
-
+  const navigate = useNavigate();
   const onFormChange = (e) => {
     setFormInputs({ ...formInputs, [e.target.name]: e.target.value });
   };
@@ -50,9 +50,9 @@ const OnShoreServiceAdmin = ({ inputs, setInputs }) => {
     });
   };
   return (
-    <div style={{ width: "100%" }}>
+    <div className="d-flex ms-3 py-3 flex-row-reverse">
       <SidebarAdmin />
-      <div>
+      <div style={{ width: "100%" }}>
         <div class="rounded-5 shadow p-4">
           <div class="container-90 display form-heading">
             <h4>ON-SHORE SERVICES</h4>
@@ -230,7 +230,10 @@ const OnShoreServiceAdmin = ({ inputs, setInputs }) => {
               })}
             </div>
             <div class="d-flex justify-content-between">
-              <a class="btn btn-primary btnPrevious16 ">Previous</a>
+              <button class="btn btn-primary btnPrevious16 " onClick={(e)=>{
+                e.preventDefault();
+                navigate("/admin/edit/seaexperience");
+              }}>Previous</button>
               <button
                 class="btn btn-primary btnNext16"
                 onClick={(e) => {
@@ -238,6 +241,7 @@ const OnShoreServiceAdmin = ({ inputs, setInputs }) => {
                   console.log("i was here", curArr);
                   setInputs({ ...inputs, on_shore: [...curArr] });
                   // sendData();
+                  navigate("/admin/edit/declaration");
                 }}
               >
                 Next
@@ -249,5 +253,7 @@ const OnShoreServiceAdmin = ({ inputs, setInputs }) => {
     </div>
   );
 };
+
+export default OnShoreServiceAdmin
 
 

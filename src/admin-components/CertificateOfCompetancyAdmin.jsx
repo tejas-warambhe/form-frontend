@@ -9,9 +9,9 @@ const CertificateOfCompetancyAdmin = ({ inputs, setInputs }) => {
   let navigate = useNavigate();
 
   return (
-    <div style={{ width: "100%" }}>
+    <div className="d-flex ms-3 py-3 flex-row-reverse">
       <SidebarAdmin />
-      <div>
+      <div style={{ width: "100%" }}>
         <div class="p-4 rounded-3 shadow">
           <div class="container-90 display form-heading">
             <h4>LICENCE / CERTIFICATES OF COMPETENCY</h4>
@@ -345,7 +345,7 @@ const CertificateOfCompetancyAdmin = ({ inputs, setInputs }) => {
               class="btn btn-primary btnPrevious6 my-3"
               onClick={(e) => {
                 e.preventDefault();
-                navigate('/academicQualifications');
+                navigate('/admin/edit/academicQualifications');
               }}
             >
               Previous
@@ -353,7 +353,7 @@ const CertificateOfCompetancyAdmin = ({ inputs, setInputs }) => {
             <button class="btn btn-primary btnNext6 my-3 " 
               onClick={(e) => {
                 e.preventDefault();
-                navigate('/stcwandothercertificates');
+                navigate('/admin/edit/stcwandothercertificates');
               }}
             >
               Next

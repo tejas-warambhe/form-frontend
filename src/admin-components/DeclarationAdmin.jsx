@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import SidebarAdmin from "../components/SideBarAdmin";
 
 const DeclarationAdmin = ({ inputs, setInputs }) => {
@@ -7,6 +8,7 @@ const DeclarationAdmin = ({ inputs, setInputs }) => {
     formal_photo: "",
     signature_photo: "",
   });
+  const navigate = useNavigate();
   const [file, setFile] = useState({
     formal_photo: "",
     signature_photo: "",
@@ -59,9 +61,9 @@ const DeclarationAdmin = ({ inputs, setInputs }) => {
   };
 
   return (
-    <div style={{ width: "100%" }}>
+    <div className="d-flex ms-3 py-3 flex-row-reverse">
       <SidebarAdmin />
-      <div>
+      <div style={{ width: "100%" }}>
         <div class="rounded-5 shadow p-4">
           <h4>DECLARATION </h4>
           <br />
@@ -145,7 +147,12 @@ const DeclarationAdmin = ({ inputs, setInputs }) => {
           </div>
           <hr class="mt-3" />
           <div class="end-tab">
-            <a class="btn btn-primary btnPrevious17">Previous</a>
+            <button class="btn btn-primary btnPrevious17" onClick={(e)=>{
+              e.preventDefault();
+              navigate('/admin/edit/onshoreservice')
+            }}>
+              Previous
+              </button>
             <button
               class="btn btn-success nautical-submit"
               type="submit"
