@@ -18,13 +18,16 @@ const NextofKeens = ({ inputs, setInputs }) => {
   console.log(formInputs);
 
   const sendData = async () => {
-    const response = await fetch("https://marine-form-backend.herokuapp.com/upload", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(inputs),
-    });
+    const response = await fetch(
+      "https://marine-form-backend.herokuapp.com/upload",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(inputs),
+      }
+    );
     const parseRes = await response.json();
     console.log(parseRes);
   };
@@ -32,6 +35,7 @@ const NextofKeens = ({ inputs, setInputs }) => {
     setArr([...arr, a]);
     setA(a + 1);
     setCurrArr([...curArr, formInputs]);
+    setInputs({ ...inputs, kin_array: [...curArr, formInputs] });
     setFormInputs({
       name: "",
       relation: "",
@@ -50,9 +54,9 @@ const NextofKeens = ({ inputs, setInputs }) => {
 
   let navigate = useNavigate();
   return (
-    <div className="d-flex ms-3 py-3 flex-row-reverse" >
-      <Sidebar/>
-      <div style={{width:"100%"}}>
+    <div className="d-flex ms-3 py-3 flex-row-reverse">
+      <Sidebar />
+      <div style={{ width: "100%" }}>
         <form class="rounded-3 shadow">
           <div class="display form-heading">
             <h4 class="p-4 pb-0">NEXT OF KIN / DEPENDENTS</h4>
@@ -175,6 +179,12 @@ const NextofKeens = ({ inputs, setInputs }) => {
                           id={ele}
                           onClick={(e) => {
                             e.preventDefault();
+                            setInputs({
+                              ...inputs,
+                              kin_array: curArr.filter((ok) => {
+                                return ele.ppno !== ok.ppno;
+                              }),
+                            });
                             setCurrArr(
                               curArr.filter((ok) => {
                                 return ele.ppno !== ok.ppno;
@@ -194,7 +204,7 @@ const NextofKeens = ({ inputs, setInputs }) => {
                     class="btn btn-primary btnPrevious2 my-3"
                     onClick={(e) => {
                       e.preventDefault();
-                      navigate('/')
+                      navigate("/");
                     }}
                   >
                     Previous
@@ -203,8 +213,8 @@ const NextofKeens = ({ inputs, setInputs }) => {
                     class="btn btn-primary btnNext2 my-3 "
                     onClick={(e) => {
                       e.preventDefault();
-                      setInputs({ ...inputs, kin_array: [...curArr] });
-                      navigate('/passport')
+                      // setInputs({ ...inputs, kin_array: [...curArr] });
+                      navigate("/passport");
                     }}
                   >
                     Next

@@ -37,6 +37,7 @@ const OnShoreServiceAdmin = ({ inputs, setInputs }) => {
     setArr([...arr, a]);
     setA(a + 1);
     setCurrArr([...curArr, formInputs]);
+    setInputs({ ...inputs, on_shore: [...curArr, formInputs] });
     setFormInputs({
       Employer: "",
       Title: "",
@@ -216,6 +217,12 @@ const OnShoreServiceAdmin = ({ inputs, setInputs }) => {
                       id={ele}
                       onClick={(e) => {
                         e.preventDefault();
+                        setInputs({
+                          ...inputs,
+                          on_shore: curArr.filter((ok) => {
+                            return ele.from !== ok.from;
+                          }),
+                        });
                         setCurrArr(
                           curArr.filter((ok) => {
                             return ele.from !== ok.from;
@@ -239,7 +246,7 @@ const OnShoreServiceAdmin = ({ inputs, setInputs }) => {
                 onClick={(e) => {
                   e.preventDefault();
                   console.log("i was here", curArr);
-                  setInputs({ ...inputs, on_shore: [...curArr] });
+                  // setInputs({ ...inputs, on_shore: [...curArr] });
                   // sendData();
                   navigate("/admin/edit/declaration");
                 }}

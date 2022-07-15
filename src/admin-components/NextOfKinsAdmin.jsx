@@ -33,6 +33,7 @@ const NextOfKinsAdmin = ({ inputs, setInputs, getDetails }) => {
     setArr([...arr, a]);
     setA(a + 1);
     setCurrArr([...curArr, formInputs]);
+    setInputs({ ...inputs, kin_array: [...curArr, formInputs] });
     setFormInputs({
       name: "",
       relation: "",
@@ -180,6 +181,12 @@ const NextOfKinsAdmin = ({ inputs, setInputs, getDetails }) => {
                           id={ele}
                           onClick={(e) => {
                             e.preventDefault();
+                            setInputs({
+                              ...inputs,
+                              kin_array: curArr.filter((ok) => {
+                                return ele.ppno !== ok.ppno;
+                              }),
+                            });
                             setCurrArr(
                               curArr.filter((ok) => {
                                 return ele.ppno !== ok.ppno;
@@ -210,7 +217,7 @@ const NextOfKinsAdmin = ({ inputs, setInputs, getDetails }) => {
                     onClick={(e) => {
                       e.preventDefault();
                       console.log("i was here", curArr);
-                      setInputs({ ...inputs, kin_array: [...curArr] });
+                      // setInputs({ ...inputs, kin_array: [...curArr] });
                     //   sendData();
                     navigate("/admin/edit/passport");
                     }}

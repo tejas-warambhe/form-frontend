@@ -45,7 +45,9 @@ function App() {
         first_name: "",
         last_name: "",
         middle_name:"",
-        kin_array: []
+        kin_array: [],
+        on_shore: [],
+        special_experience: [],
     });
     const [inputs1, setInputs1] = useState({
         kin_array: [],

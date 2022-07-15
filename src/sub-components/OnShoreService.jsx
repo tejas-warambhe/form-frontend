@@ -23,21 +23,11 @@ const OnShoreService = ({ inputs, setInputs }) => {
   };
   console.log(formInputs);
 
-  const sendData = async () => {
-    const response = await fetch("https://marine-form-backend.herokuapp.com/upload", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(inputs),
-    });
-    const parseRes = await response.json();
-    console.log(parseRes);
-  };
   const incrementArr = () => {
     setArr([...arr, a]);
     setA(a + 1);
     setCurrArr([...curArr, formInputs]);
+    setInputs({ ...inputs, on_shore: [...curArr, formInputs] });
     setFormInputs({
       Employer: "",
       Title: "",
@@ -218,6 +208,12 @@ const OnShoreService = ({ inputs, setInputs }) => {
                       id={ele}
                       onClick={(e) => {
                         e.preventDefault();
+                        setInputs({
+                          ...inputs,
+                          on_shore: curArr.filter((ok) => {
+                            return ele.from !== ok.from;
+                          }),
+                        });
                         setCurrArr(
                           curArr.filter((ok) => {
                             return ele.from !== ok.from;
@@ -241,7 +237,7 @@ const OnShoreService = ({ inputs, setInputs }) => {
                 onClick={(e) => {
                   e.preventDefault();
                   // console.log("i was here", curArr);
-                  setInputs({ ...inputs, on_shore: [...curArr] });
+                  // setInputs({ ...inputs, on_shore: [...curArr] });
                   // sendData();
                   navigate('/declaration')
                 }}

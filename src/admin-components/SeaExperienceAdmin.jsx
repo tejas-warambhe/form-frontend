@@ -40,6 +40,7 @@ const SeaExperienceAdmin = ({ inputs, setInputs }) => {
     setArr([...arr, a]);
     setA(a + 1);
     setCurrArr([...curArr, formInputs]);
+    setInputs({ ...inputs, special_experience: [...curArr, formInputs] });
     setFormInputs({
       Employer: "",
       RPSL: "",
@@ -263,6 +264,12 @@ const SeaExperienceAdmin = ({ inputs, setInputs }) => {
                       id={ele}
                       onClick={(e) => {
                         e.preventDefault();
+                        setInputs({
+                          ...inputs,
+                          special_experience: curArr.filter((ok) => {
+                            return ele.total !== ok.total;
+                          }),
+                        });
                         setCurrArr(
                           curArr.filter((ok) => {
                             return ele.total !== ok.total;
@@ -288,7 +295,7 @@ const SeaExperienceAdmin = ({ inputs, setInputs }) => {
                 onClick={(e) => {
                   e.preventDefault();
                   console.log("i was here", curArr);
-                  setInputs({ ...inputs, special_experience: curArr });
+                  // setInputs({ ...inputs, special_experience: curArr });
                   navigate('/admin/edit/onshoreservice')
                 //   sendData();
                 }}
