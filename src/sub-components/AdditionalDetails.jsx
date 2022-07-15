@@ -115,6 +115,7 @@ const AdditionalDetails = ({ inputs, setInputs }) => {
                   <div class="my-2 ">
                     <label>From:</label>{" "}
                     <input
+                    type="date"
                       value={inputs.certificate_suspended_from}
                       name="certificate_suspended_from"
                       onChange={(e) => onChange(e)}
@@ -123,6 +124,7 @@ const AdditionalDetails = ({ inputs, setInputs }) => {
                   <div class="my-2">
                     <label>To:</label>{" "}
                     <input
+                    type="date"
                       value={inputs.certificate_suspended_to}
                       name="certificate_suspended_to"
                       onChange={(e) => onChange(e)}

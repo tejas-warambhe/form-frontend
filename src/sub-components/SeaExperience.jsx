@@ -35,7 +35,8 @@ const SeaExperience = ({ inputs, setInputs }) => {
     const parseRes = await response.json();
     console.log(parseRes);
   };
-  const incrementArr = () => {
+  const incrementArr = (e) => {
+    e.preventDefault();
     setArr([...arr, a]);
     setA(a + 1);
     setCurrArr([...curArr, formInputs]);
@@ -217,7 +218,7 @@ const SeaExperience = ({ inputs, setInputs }) => {
               <button
                 id="add_row"
                 class="btn btn-primary pull-right"
-                onClick={incrementArr}
+                onClick={(e) => incrementArr(e)}
               >
                 Submit
               </button>
