@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+
 const Navbar = () => {
   return (
     <div>
@@ -28,15 +28,18 @@ const Navbar = () => {
                     <li className="nav-btn"><a className="navigation-link" href="https://nauticalglobal.com/contact.html">Contact</a></li>
                     {/* {% if user.is_authenticated %} */}
                     <li className="btn btn-link nav-btn" style={{ padding: "10px" }}>
-                        <Link className="navigation-link" to="/admin">Admin Panel</Link>
+                   <a className="navigation-link" href="http://hrithik2acc.pythonanywhere.com/admin_form">Admin</a>
+                        {/* <Link className="navigation-link" to="/admin">Admin Panel</Link> */}
+                        {/* http://hrithik2acc.pythonanywhere.com/admin_form */}
+
                     </li>
-                    <li className="btn btn-link nav-btn" style={{ padding: "10px" }}>
+                    {/* <li className="btn btn-link nav-btn" style={{ padding: "10px" }}>
                         <a className="navigation-link" href="{% url 'logout'%}">Log Out</a>
-                    </li>
+                    </li> */}
                     {/* {% else %} */}
-                    <li className="btn btn-primary nav-btn" style={{ padding: "10px" }}>
+                    {/* <li className="btn btn-primary nav-btn" style={{ padding: "10px" }}>
                         <a className="navigation-link" style={{ color: "white !important" }} href="{% url 'login'%}">Login</a>
-                    </li>
+                    </li> */}
                     {/* {% endif %} */}
                     </ul>
                 </div>

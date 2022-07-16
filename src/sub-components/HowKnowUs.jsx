@@ -9,7 +9,7 @@ const HowKnowUs = ({ inputs, setInputs }) => {
   let navigate = useNavigate();
   return (
     <div className="d-flex ms-3 py-3 flex-row-reverse">
-      <Sidebar/>
+      <Sidebar />
       <div style={{ width: "100%" }}>
         <div class="rounded-3 shadow p-4">
           <div class="container-90 display form-heading">
@@ -25,13 +25,17 @@ const HowKnowUs = ({ inputs, setInputs }) => {
                       <label for="">Company presentation/seminar</label>
                     </td>
                     <td>
-                      <input
+                       <select
                         value={inputs.company_presentation}
                         name="company_presentation"
                         onChange={(e) => onChange(e)}
-                        type="checkbox"
-                        style={{ height: "50%", width: "50%", padding: "2px" }}
-                      />
+                        style={{ height: "50%", width: "25%", padding: "2px" }}
+                      >
+                        <option value="No" default>
+                          No
+                        </option>
+                        <option value="Yes">Yes</option>
+                      </select>
                     </td>
                   </tr>
                   <tr>
@@ -40,13 +44,17 @@ const HowKnowUs = ({ inputs, setInputs }) => {
                       <label for="">Marine Club notice-board</label>
                     </td>
                     <td>
-                      <input
+                      <select
                         value={inputs.marine_club}
                         name="marine_club"
                         onChange={(e) => onChange(e)}
-                        type="checkbox"
-                        style={{ height: "50%", width: "50%", padding: "2px" }}
-                      />
+                        style={{ height: "50%", width: "25%", padding: "2px" }}
+                      >
+                        <option value="No" default>
+                          No
+                        </option>
+                        <option value="Yes">Yes</option>
+                      </select>
                     </td>
                   </tr>
                   <tr>
@@ -55,13 +63,17 @@ const HowKnowUs = ({ inputs, setInputs }) => {
                       <label for="">Marine magazine advertisement</label>
                     </td>
                     <td>
-                      <input
+                      <select
                         value={inputs.marine_magzine}
                         name="marine_magzine"
                         onChange={(e) => onChange(e)}
-                        type="checkbox"
-                        style={{ height: "50%", width: "50%", padding: "2px" }}
-                      />
+                        style={{ height: "50%", width: "25%", padding: "2px" }}
+                      >
+                        <option value="No" default>
+                          No
+                        </option>
+                        <option value="Yes">Yes</option>
+                      </select>
                     </td>
                   </tr>
                   <tr>
@@ -70,13 +82,18 @@ const HowKnowUs = ({ inputs, setInputs }) => {
                       <label for="">Newspaper advertisement</label>
                     </td>
                     <td>
-                      <input
+                      
+                      <select
                         value={inputs.newspaper_advertisement}
                         name="newspaper_advertisement"
                         onChange={(e) => onChange(e)}
-                        type="checkbox"
-                        style={{ height: "50%", width: "50%", padding: "2px" }}
-                      />
+                        style={{ height: "50%", width: "25%", padding: "2px" }}
+                      >
+                        <option value="No" default>
+                          No
+                        </option>
+                        <option value="Yes">Yes</option>
+                      </select>
                     </td>
                   </tr>
                   <tr>
@@ -85,13 +102,18 @@ const HowKnowUs = ({ inputs, setInputs }) => {
                       <label for="">Told by seagoing friend (s)</label>
                     </td>
                     <td>
-                      <input
-                        type="checkbox"
+                     
+                       <select
                         value={inputs.told_by_seagoing_friend}
                         name="told_by_seagoing_friend"
                         onChange={(e) => onChange(e)}
-                        style={{ height: "50%", width: "50%", padding: "2px" }}
-                      />
+                        style={{ height: "50%", width: "25%", padding: "2px" }}
+                      >
+                        <option value="No" default>
+                          No
+                        </option>
+                        <option value="Yes">Yes</option>
+                      </select>
                     </td>
                   </tr>
                   <tr>
@@ -100,13 +122,17 @@ const HowKnowUs = ({ inputs, setInputs }) => {
                       <label for="">Direct Mail from Company</label>
                     </td>
                     <td>
-                      <input
+                       <select
                         value={inputs.direct_mail}
                         name="direct_mail"
                         onChange={(e) => onChange(e)}
-                        type="checkbox"
-                        style={{ height: "50%", width: "50%", padding: "2px" }}
-                      />
+                        style={{ height: "50%", width: "25%", padding: "2px" }}
+                      >
+                        <option value="No" default>
+                          No
+                        </option>
+                        <option value="Yes">Yes</option>
+                      </select>
                     </td>
                   </tr>
                   <tr>
@@ -115,11 +141,17 @@ const HowKnowUs = ({ inputs, setInputs }) => {
                       <label for="">Others (Please specify)</label>
                     </td>
                     <td>
-                      <input
+                      <select
                         value={inputs.others_advert}
                         name="others_advert"
                         onChange={(e) => onChange(e)}
-                      />
+                        style={{ height: "50%", width: "25%", padding: "2px" }}
+                      >
+                        <option value="No" default>
+                          No
+                        </option>
+                        <option value="Yes">Yes</option>
+                      </select>
                     </td>
                   </tr>
 

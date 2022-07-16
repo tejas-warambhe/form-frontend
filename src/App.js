@@ -1,9 +1,9 @@
-import logo from "./logo.svg";
+
 import "./App.css";
 import Navbar from "./components/Navbar";
-import HomePage from "./components/HomePage";
-import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
-import { useForm } from "react-hook-form";
+
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import { useState } from "react";
 import ProfileDetails from "./sub-components/ProfileDetails";
 import NextofKeens from "./sub-components/NextofKeens";
@@ -48,11 +48,25 @@ function App() {
         kin_array: [],
         on_shore: [],
         special_experience: [],
+        company_presentation: "No",
+        marine_club: "No",
+        marine_magzine: "No",
+        newspaper_advertisement: "No",
+        told_by_seagoing_friend: "No",
+        direct_mail: "No",
+        others_advert: "No"
     });
     const [inputs1, setInputs1] = useState({
         kin_array: [],
         on_shore: [],
         special_experience: [],
+        company_presentation: "No",
+        marine_club: "No",
+        marine_magzine: "No",
+        newspaper_advertisement: "No",
+        told_by_seagoing_friend: "No",
+        direct_mail: "No",
+        others_advert: "No"
           
     });
     return (
