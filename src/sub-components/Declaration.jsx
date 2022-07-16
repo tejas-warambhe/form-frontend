@@ -18,7 +18,7 @@ const Declaration = ({ inputs, setInputs }) => {
 
   const handleFileChange = (event) => {
     setFile({ ...file, [event.target.name]: event.target.files });
-    console.log(file.formal_photo);
+    // console.log(file.formal_photo)
   };
   const navigate=useNavigate();
   const handleSubmit = (event) => {

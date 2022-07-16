@@ -39,7 +39,7 @@ const NextofKeens = ({ inputs, setInputs }) => {
     setFormInputs({
       name: "",
       relation: "",
-      ppno: 0,
+      ppno: "",
       dob: "",
     });
   };
@@ -66,7 +66,7 @@ const NextofKeens = ({ inputs, setInputs }) => {
             <div class="form-row">
               <div class="container-90">
                 <div class="row">
-                  <div class="form-group col-md-3 input-padding">
+                  {/* <div class="form-group col-md-3 input-padding">
                     <label for="inputname">Name</label>
                     <input />
                   </div>
@@ -79,7 +79,7 @@ const NextofKeens = ({ inputs, setInputs }) => {
                   <div class="form-group col-md-3 input-padding">
                     <label for="inputname">Add NKD</label>
                     <input />
-                  </div>
+                  </div> */}
                 </div>
 
                 <div class="mt-4">

@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import SidebarAdmin from "../components/SideBarAdmin";
 import { useNavigate } from "react-router-dom";
-const NextOfKinsAdmin = ({ inputs, setInputs, getDetails }) => {
+const NextOfKinsAdmin = ({ inputs, setInputs }) => {
   const [a, setA] = useState(1);
   console.log(inputs.kin_array, "here cow");
   const [curArr, setCurrArr] = useState(inputs.kin_array);
   const [formInputs, setFormInputs] = useState({
     name: "",
     relation: "",
-    ppno: 0,
+    ppno: "",
     dob: "",
   });
   const [arr, setArr] = useState([0]);
@@ -37,7 +37,7 @@ const NextOfKinsAdmin = ({ inputs, setInputs, getDetails }) => {
     setFormInputs({
       name: "",
       relation: "",
-      ppno: 0,
+      ppno: "",
       dob: "",
     });
   };
@@ -68,7 +68,7 @@ const NextOfKinsAdmin = ({ inputs, setInputs, getDetails }) => {
             <div class="form-row">
               <div class="container-90">
                 <div class="row">
-                  <div class="form-group col-md-3 input-padding">
+                  {/* <div class="form-group col-md-3 input-padding">
                     <label for="inputname">Name</label>
                     <input />
                   </div>
@@ -81,7 +81,7 @@ const NextOfKinsAdmin = ({ inputs, setInputs, getDetails }) => {
                   <div class="form-group col-md-3 input-padding">
                     <label for="inputname">Add NKD</label>
                     <input />
-                  </div>
+                  </div> */}
                 </div>
 
                 <div class="mt-4">

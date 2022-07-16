@@ -221,7 +221,7 @@ const StcwOtherCertificatesAdmin = ({ inputs, setInputs }) => {
                       />
                     </td>
                     <td>
-                      <inpu
+                      <input
                         value={inputs.pst_place_of_issue}
                         name="pst_place_of_issue"
                         onChange={(e) => onChange(e)}
@@ -694,9 +694,9 @@ const StcwOtherCertificatesAdmin = ({ inputs, setInputs }) => {
                     </td>
                     <td>
                       <input
-                        type="indos_date_of_expiry"
+                        type="date"
                         value={inputs.indos_date_of_expiry}
-                        name="height"
+                        name="indos_date_of_expiry"
                         onChange={(e) => onChange(e)}
                       />
                     </td>
