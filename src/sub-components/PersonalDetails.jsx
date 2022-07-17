@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 
 const PersonalDetails = ({ inputs, setInputs }) => {
@@ -9,7 +9,7 @@ const PersonalDetails = ({ inputs, setInputs }) => {
   let navigate = useNavigate();
   return (
     <div className="d-flex ms-3 py-3 flex-row-reverse">
-      <Sidebar/>
+      <Sidebar />
       <div style={{ width: "100%" }}>
         <div class="rounded-3 shadow p-4">
           <div class="container-90 display form-heading">
@@ -131,6 +131,40 @@ const PersonalDetails = ({ inputs, setInputs }) => {
                 onChange={(e) => onChange(e)}
               />
             </div>
+            <div class="d-flex row  my-3" style={{ alignItems: "flex-end" }}>
+              <div class="col-md-3 ">
+                <label>LinkedIn: </label>
+                <input
+                  value={inputs.linkedin}
+                  name="linkedin"
+                  onChange={(e) => onChange(e)}
+                />
+              </div>
+              <div class="col-md-3 ">
+                <label>Facebook: </label>
+                <input
+                  value={inputs.facebook}
+                  name="facebook"
+                  onChange={(e) => onChange(e)}
+                />
+              </div>
+              <div class="col-md-3 ">
+                <label>Instagram: </label>
+                <input
+                  value={inputs.instagram}
+                  name="instagram"
+                  onChange={(e) => onChange(e)}
+                />
+              </div>
+              <div class="col-md-3 ">
+                <label>Twitter: </label>
+                <input
+                  value={inputs.twitter}
+                  name="twitter"
+                  onChange={(e) => onChange(e)}
+                />
+              </div>
+            </div>
           </div>
           <div class="d-flex row ">
             <div>
@@ -144,16 +178,22 @@ const PersonalDetails = ({ inputs, setInputs }) => {
           </div>
           <hr />
           <div class="d-flex justify-content-between ">
-            <button class="btn btn-primary btnPrevious10  " onClick={(e) => {
-              e.preventDefault();
-              navigate('/howyouknowus')
-            }}>
+            <button
+              class="btn btn-primary btnPrevious10  "
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/howyouknowus");
+              }}
+            >
               Previous
             </button>
-            <button class="btn btn-primary btnNext10 "  onClick={(e) => {
-              e.preventDefault();
-              navigate('/additionalinformation')
-            }}>
+            <button
+              class="btn btn-primary btnNext10 "
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/additionalinformation");
+              }}
+            >
               Next
             </button>
           </div>
