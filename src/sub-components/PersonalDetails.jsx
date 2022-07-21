@@ -131,40 +131,7 @@ const PersonalDetails = ({ inputs, setInputs }) => {
                 onChange={(e) => onChange(e)}
               />
             </div>
-            <div class="d-flex row  my-3" style={{ alignItems: "flex-end" }}>
-              <div class="col-md-3 ">
-                <label>LinkedIn: </label>
-                <input
-                  value={inputs.linkedin}
-                  name="linkedin"
-                  onChange={(e) => onChange(e)}
-                />
-              </div>
-              <div class="col-md-3 ">
-                <label>Facebook: </label>
-                <input
-                  value={inputs.facebook}
-                  name="facebook"
-                  onChange={(e) => onChange(e)}
-                />
-              </div>
-              <div class="col-md-3 ">
-                <label>Instagram: </label>
-                <input
-                  value={inputs.instagram}
-                  name="instagram"
-                  onChange={(e) => onChange(e)}
-                />
-              </div>
-              <div class="col-md-3 ">
-                <label>Twitter: </label>
-                <input
-                  value={inputs.twitter}
-                  name="twitter"
-                  onChange={(e) => onChange(e)}
-                />
-              </div>
-            </div>
+            
           </div>
           <div class="d-flex row ">
             <div>

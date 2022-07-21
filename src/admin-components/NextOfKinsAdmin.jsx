@@ -54,6 +54,9 @@ const NextOfKinsAdmin = ({ inputs, setInputs }) => {
   //   await getDetails();
     
   // }, [])
+  const onChange = (e) => {
+    setInputs({ ...inputs, [e.target.name]: e.target.value });
+  };
 
   return (
     <div className="d-flex ms-3 py-3 flex-row-reverse">
@@ -82,6 +85,29 @@ const NextOfKinsAdmin = ({ inputs, setInputs }) => {
                     <label for="inputname">Add NKD</label>
                     <input />
                   </div> */}
+                  <div class="form-group col-md-3 input-padding">
+                    <label for="inputname">Name</label>
+                    <input 
+                      value={inputs.name_of_kin}
+                      onChange={(e) => onChange(e)}
+                    />
+                  </div>
+
+                  <div class="form-group col-md-3 input-padding">
+                    <label for="inputname">Relation</label>
+                    <input 
+                      value={inputs.relation}
+                      onChange={(e) => onChange(e)}
+                    />
+                  </div>
+
+                  <div class="form-group col-md-3 input-padding">
+                    <label for="inputname">Address </label>
+                    <input 
+                      value={inputs.add_nkd}
+                      onChange={(e) => onChange(e)}
+                    />
+                  </div>
                 </div>
 
                 <div class="mt-4">

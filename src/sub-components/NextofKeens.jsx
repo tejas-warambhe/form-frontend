@@ -12,6 +12,10 @@ const NextofKeens = ({ inputs, setInputs }) => {
   });
   const [arr, setArr] = useState([0]);
 
+  const onChange = (e) => {
+    setInputs({...inputs, [e.target.name] : e.target.value});
+  }
+
   const onFormChange = (e) => {
     setFormInputs({ ...formInputs, [e.target.name]: e.target.value });
   };
@@ -66,20 +70,29 @@ const NextofKeens = ({ inputs, setInputs }) => {
             <div class="form-row">
               <div class="container-90">
                 <div class="row">
-                  {/* <div class="form-group col-md-3 input-padding">
+                  <div class="form-group col-md-3 input-padding">
                     <label for="inputname">Name</label>
-                    <input />
+                    <input 
+                      value={inputs.name_of_kin}
+                      onChange={(e) => onChange(e)}
+                    />
                   </div>
 
                   <div class="form-group col-md-3 input-padding">
                     <label for="inputname">Relation</label>
-                    <input />
+                    <input 
+                      value={inputs.relation}
+                      onChange={(e) => onChange(e)}
+                    />
                   </div>
 
                   <div class="form-group col-md-3 input-padding">
-                    <label for="inputname">Add NKD</label>
-                    <input />
-                  </div> */}
+                    <label for="inputname">Address </label>
+                    <input 
+                      value={inputs.add_nkd}
+                      onChange={(e) => onChange(e)}
+                    />
+                  </div>
                 </div>
 
                 <div class="mt-4">
