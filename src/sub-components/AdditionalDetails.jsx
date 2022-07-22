@@ -22,7 +22,7 @@ const AdditionalDetails = ({ inputs, setInputs }) => {
                 <td>
                   <label>Have you applied to this company before?</label>
                 </td>
-                <td>
+                {/* <td>
                   <div class="form-check ">
                     <input
                       value={inputs.applied_before}
@@ -30,7 +30,7 @@ const AdditionalDetails = ({ inputs, setInputs }) => {
                       onChange={(e) => onChange(e)}
                     />
                   </div>
-                </td>
+                </td> */}
               </tr>
               <tr>
                 <td>
@@ -41,11 +41,14 @@ const AdditionalDetails = ({ inputs, setInputs }) => {
                 </td>
                 <td>
                   <div class="form-check ">
-                    <input
+                    <select
                       value={inputs.ever_bonded}
                       name="ever_bonded"
                       onChange={(e) => onChange(e)}
-                    />
+                    >
+                      <option value="No" selected="selected">No</option>
+                      <option value="Yes" >Yes</option>
+                    </select>
                   </div>
                 </td>
               </tr>
@@ -58,11 +61,14 @@ const AdditionalDetails = ({ inputs, setInputs }) => {
                 </td>
                 <td>
                   <div class="form-check ">
-                    <input
+                    <select
                       value={inputs.crime_convicted}
                       name="crime_convicted"
                       onChange={(e) => onChange(e)}
-                    />
+                    >
+                      <option value="No" selected="selected">No</option>
+                      <option value="Yes" >Yes</option>
+                    </select>
                   </div>
                   <div>
                     <label>Details: </label>{" "}
@@ -83,11 +89,14 @@ const AdditionalDetails = ({ inputs, setInputs }) => {
                 </td>
                 <td>
                   <div class="form-check ">
-                    <input
+                    <select
                       value={inputs.ship_accident}
                       name="ship_accident"
                       onChange={(e) => onChange(e)}
-                    />
+                    >
+                      <option value="No" selected="selected">No</option>
+                      <option value="Yes" >Yes</option>
+                    </select>
                   </div>
                   <div>
                     <label>Details: </label>{" "}
@@ -108,11 +117,14 @@ const AdditionalDetails = ({ inputs, setInputs }) => {
                 </td>
                 <td>
                   <div class="form-check ">
-                    <input
+                    <select
                       value={inputs.certificate_suspended}
                       name="certificate_suspended"
                       onChange={(e) => onChange(e)}
-                    />
+                    >
+                      <option value="No" selected="selected">No</option>
+                      <option value="Yes"> Yes</option>
+                    </select>
                   </div>
                   <div class="my-2 ">
                     <label>From:</label>{" "}

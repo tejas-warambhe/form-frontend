@@ -54,7 +54,15 @@ function App() {
         newspaper_advertisement: "No",
         told_by_seagoing_friend: "No",
         direct_mail: "No",
-        others_advert: "No"
+        others_advert: "No",
+        nationality: "India",
+        smoker: "No",
+        maritial_status: "Single",
+        ever_bonded: "No",
+        crime_convicted: "No",
+        ship_accident: "No",
+        certificate_suspended: "No",
+        may_approach_employer: "No"
     });
     const [inputs1, setInputs1] = useState({
         kin_array: [],
@@ -66,7 +74,15 @@ function App() {
         newspaper_advertisement: "No",
         told_by_seagoing_friend: "No",
         direct_mail: "No",
-        others_advert: "No"
+        others_advert: "No",
+        nationality: "India",
+        smoker: "No",
+        maritial_status: "Single",
+        ever_bonded: "No",
+        crime_convicted: "No",
+        ship_accident: "No",
+        certificate_suspended: "No",
+        may_approach_employer: "No"
           
     });
     return (

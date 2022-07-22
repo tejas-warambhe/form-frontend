@@ -6,7 +6,7 @@ const SeamenBookAdmin = ({ inputs, setInputs }) => {
   const onChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
-  console.log(inputs);
+  //console.log(inputs);
   let navigate = useNavigate();
   return (
     <div className="d-flex ms-3 py-3 flex-row-reverse">
@@ -74,8 +74,8 @@ const SeamenBookAdmin = ({ inputs, setInputs }) => {
                     </td>
                     <td>
                       <input
-                        value={inputs.panama_certificate_no}
-                        name="panama_certificate_no"
+                        value={inputs.panama_place_of_issue}
+                        name="panama_place_of_issue"
                         onChange={(e) => onChange(e)}
                       />
                     </td>

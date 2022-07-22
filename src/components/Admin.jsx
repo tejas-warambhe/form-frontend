@@ -14,7 +14,7 @@ function Admin() {
       },
     });
     let parseRes = await response.json();
-    console.log(parseRes);
+    //console.log(parseRes);
     setForms(parseRes);
   };
 

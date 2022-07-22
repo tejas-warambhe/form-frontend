@@ -15,7 +15,7 @@ function FormDetailsCard({ name, present_rank, rank_applied, id, getForms }) {
       },
     });
     const parseRes = await response.json();
-    console.log(parseRes);
+    //console.log(parseRes);
     getForms();
   };
   return (

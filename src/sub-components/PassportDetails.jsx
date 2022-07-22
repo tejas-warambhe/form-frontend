@@ -6,7 +6,7 @@ const PassportDetails = ({ inputs, setInputs }) => {
   const onChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
-  console.log(inputs);
+  //console.log(inputs);
 
   let navigate = useNavigate();
   return (

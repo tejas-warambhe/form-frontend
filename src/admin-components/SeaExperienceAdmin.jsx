@@ -24,7 +24,7 @@ const SeaExperienceAdmin = ({ inputs, setInputs }) => {
   const onFormChange = (e) => {
     setFormInputs({ ...formInputs, [e.target.name]: e.target.value });
   };
-  console.log(formInputs);
+  //console.log(formInputs);
   const sendData = async () => {
     const response = await fetch("https://marine-form-backend.herokuapp.com/upload", {
       method: "POST",
@@ -34,7 +34,7 @@ const SeaExperienceAdmin = ({ inputs, setInputs }) => {
       body: JSON.stringify(inputs),
     });
     const parseRes = await response.json();
-    console.log(parseRes);
+    //console.log(parseRes);
   };
   const incrementArr = () => {
     setArr([...arr, a]);
@@ -294,7 +294,7 @@ const SeaExperienceAdmin = ({ inputs, setInputs }) => {
                 class="btn btn-primary btnNext15"
                 onClick={(e) => {
                   e.preventDefault();
-                  console.log("i was here", curArr);
+                  //console.log("i was here", curArr);
                   // setInputs({ ...inputs, special_experience: curArr });
                   navigate('/admin/edit/onshoreservice')
                 //   sendData();

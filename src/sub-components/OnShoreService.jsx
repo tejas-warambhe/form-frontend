@@ -21,7 +21,7 @@ const OnShoreService = ({ inputs, setInputs }) => {
   const onFormChange = (e) => {
     setFormInputs({ ...formInputs, [e.target.name]: e.target.value });
   };
-  console.log(formInputs);
+  //console.log(formInputs);
 
   const incrementArr = () => {
     setArr([...arr, a]);
@@ -236,7 +236,7 @@ const OnShoreService = ({ inputs, setInputs }) => {
                 class="btn btn-primary btnNext16"
                 onClick={(e) => {
                   e.preventDefault();
-                  // console.log("i was here", curArr);
+                  // //console.log("i was here", curArr);
                   // setInputs({ ...inputs, on_shore: [...curArr] });
                   // sendData();
                   navigate('/declaration')

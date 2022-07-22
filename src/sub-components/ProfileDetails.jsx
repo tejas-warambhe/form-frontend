@@ -21,10 +21,10 @@ const ProfileDetails = ({ setInputs, inputs }) => {
       }
     );
     const parseRes = await response.json();
-    console.log(parseRes);
+    //console.log(parseRes);
   };
 
-  //   console.log(inputs);
+  //   //console.log(inputs);
   return (
     // <div style={{ width: "100%" }}>
     <div class="d-flex ms-3 py-3 flex-row-reverse">

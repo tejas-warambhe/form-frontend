@@ -7,7 +7,7 @@ const ReasonOfApplication = ({ inputs, setInputs }) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
   let navigate = useNavigate();
-
+  //console.log(inputs);
   return (
     <div className="d-flex ms-3 py-3 flex-row-reverse">
       <Sidebar/>
@@ -55,12 +55,15 @@ const ReasonOfApplication = ({ inputs, setInputs }) => {
                   </label>
                 </td>
                 <td>
-                  <input
+                <select
                     value={inputs.may_approach_employer}
                     name="may_approach_employer"
                     onChange={(e) => onChange(e)}
-                  />{" "}
-                  <br />{" "}
+                  >
+                    <option value="No" selected="selected">No</option>
+                    <option value="Yes">Yes</option>
+                  </select>
+                  <br />
                   <input
                     value={inputs.employer_contact_details}
                     name="employer_contact_details"

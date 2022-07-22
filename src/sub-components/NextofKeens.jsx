@@ -19,7 +19,7 @@ const NextofKeens = ({ inputs, setInputs }) => {
   const onFormChange = (e) => {
     setFormInputs({ ...formInputs, [e.target.name]: e.target.value });
   };
-  console.log(formInputs);
+  //console.log(formInputs);
 
   const sendData = async () => {
     const response = await fetch(
@@ -33,7 +33,7 @@ const NextofKeens = ({ inputs, setInputs }) => {
       }
     );
     const parseRes = await response.json();
-    console.log(parseRes);
+    //console.log(parseRes);
   };
   const incrementArr = () => {
     setArr([...arr, a]);
@@ -54,7 +54,7 @@ const NextofKeens = ({ inputs, setInputs }) => {
       setArr(temp.splice(0, temp.length - 1));
     }
   };
-  console.log(inputs);
+  //console.log(inputs);
 
   let navigate = useNavigate();
   return (
@@ -75,6 +75,7 @@ const NextofKeens = ({ inputs, setInputs }) => {
                     <input 
                       value={inputs.name_of_kin}
                       onChange={(e) => onChange(e)}
+                      name="name_of_kin"
                     />
                   </div>
 
@@ -83,6 +84,7 @@ const NextofKeens = ({ inputs, setInputs }) => {
                     <input 
                       value={inputs.relation}
                       onChange={(e) => onChange(e)}
+                      name="relation"
                     />
                   </div>
 
@@ -91,6 +93,7 @@ const NextofKeens = ({ inputs, setInputs }) => {
                     <input 
                       value={inputs.add_nkd}
                       onChange={(e) => onChange(e)}
+                      name="add_nkd"
                     />
                   </div>
                 </div>

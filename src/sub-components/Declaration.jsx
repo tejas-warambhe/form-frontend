@@ -18,7 +18,7 @@ const Declaration = ({ inputs, setInputs }) => {
 
   const handleFileChange = (event) => {
     setFile({ ...file, [event.target.name]: event.target.files });
-    // console.log(file.formal_photo)
+    // //console.log(file.formal_photo)
   };
   const navigate=useNavigate();
   const handleSubmit = (event) => {
@@ -29,7 +29,7 @@ const Declaration = ({ inputs, setInputs }) => {
     data.append("file", file[`${id}`][0]);
     // }
     axios.post("https://marine-form-backend.herokuapp.com/upload/file", data).then((res) => {
-      console.log(res.data);
+      //console.log(res.data);
       setImgFile({
         ...imgFile,
         [event.target.id]:
@@ -41,7 +41,7 @@ const Declaration = ({ inputs, setInputs }) => {
           "https://marine-form-backend.herokuapp.com/public/images/" + res.data.filename,
       });
     });
-    console.log(inputs.formal_photo);
+    //console.log(inputs.formal_photo);
   };
 
   const sendData = async (e) => {
@@ -55,7 +55,7 @@ const Declaration = ({ inputs, setInputs }) => {
       body: JSON.stringify(inputs),
     });
     const parseRes = await response.json();
-    console.log(parseRes);
+    //console.log(parseRes);
   };
 
   return (

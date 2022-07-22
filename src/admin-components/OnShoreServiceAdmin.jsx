@@ -20,7 +20,7 @@ const OnShoreServiceAdmin = ({ inputs, setInputs }) => {
   const onFormChange = (e) => {
     setFormInputs({ ...formInputs, [e.target.name]: e.target.value });
   };
-  console.log(formInputs);
+  //console.log(formInputs);
 
   const sendData = async () => {
     const response = await fetch("https://marine-form-backend.herokuapp.com/upload", {
@@ -31,7 +31,7 @@ const OnShoreServiceAdmin = ({ inputs, setInputs }) => {
       body: JSON.stringify(inputs),
     });
     const parseRes = await response.json();
-    console.log(parseRes);
+    //console.log(parseRes);
   };
   const incrementArr = () => {
     setArr([...arr, a]);
@@ -245,7 +245,7 @@ const OnShoreServiceAdmin = ({ inputs, setInputs }) => {
                 class="btn btn-primary btnNext16"
                 onClick={(e) => {
                   e.preventDefault();
-                  console.log("i was here", curArr);
+                  //console.log("i was here", curArr);
                   // setInputs({ ...inputs, on_shore: [...curArr] });
                   // sendData();
                   navigate("/admin/edit/declaration");

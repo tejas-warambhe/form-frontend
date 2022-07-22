@@ -3,7 +3,7 @@ import SidebarAdmin from "../components/SideBarAdmin";
 import { useNavigate } from "react-router-dom";
 const NextOfKinsAdmin = ({ inputs, setInputs }) => {
   const [a, setA] = useState(1);
-  console.log(inputs.kin_array, "here cow");
+  //console.log(inputs.kin_array, "here cow");
   const [curArr, setCurrArr] = useState(inputs.kin_array);
   const [formInputs, setFormInputs] = useState({
     name: "",
@@ -16,7 +16,7 @@ const NextOfKinsAdmin = ({ inputs, setInputs }) => {
   const onFormChange = (e) => {
     setFormInputs({ ...formInputs, [e.target.name]: e.target.value });
   };
-  console.log(formInputs);
+  //console.log(formInputs);
 
   const sendData = async () => {
     const response = await fetch("https://marine-form-backend.herokuapp.com/upload", {
@@ -27,7 +27,7 @@ const NextOfKinsAdmin = ({ inputs, setInputs }) => {
       body: JSON.stringify(inputs),
     });
     const parseRes = await response.json();
-    console.log(parseRes);
+    //console.log(parseRes);
   };
   const incrementArr = () => {
     setArr([...arr, a]);
@@ -48,7 +48,7 @@ const NextOfKinsAdmin = ({ inputs, setInputs }) => {
       setArr(temp.splice(0, temp.length - 1));
     }
   };
-  console.log(inputs);
+  //console.log(inputs);
   const navigate=useNavigate();
   // useEffect( async () => {
   //   await getDetails();
@@ -90,6 +90,7 @@ const NextOfKinsAdmin = ({ inputs, setInputs }) => {
                     <input 
                       value={inputs.name_of_kin}
                       onChange={(e) => onChange(e)}
+                      name="name_of_kin"
                     />
                   </div>
 
@@ -98,6 +99,7 @@ const NextOfKinsAdmin = ({ inputs, setInputs }) => {
                     <input 
                       value={inputs.relation}
                       onChange={(e) => onChange(e)}
+                      name="relation"
                     />
                   </div>
 
@@ -106,6 +108,7 @@ const NextOfKinsAdmin = ({ inputs, setInputs }) => {
                     <input 
                       value={inputs.add_nkd}
                       onChange={(e) => onChange(e)}
+                      name="add_nkd"
                     />
                   </div>
                 </div>
@@ -242,7 +245,7 @@ const NextOfKinsAdmin = ({ inputs, setInputs }) => {
                     class="btn btn-primary btnNext2 my-3 "
                     onClick={(e) => {
                       e.preventDefault();
-                      console.log("i was here", curArr);
+                      //console.log("i was here", curArr);
                       // setInputs({ ...inputs, kin_array: [...curArr] });
                     //   sendData();
                     navigate("/admin/edit/passport");

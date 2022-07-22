@@ -17,7 +17,7 @@ function EditPage() {
   // });
   // const getDetails = async () => {
   //   const query = localStorage.marine_form_id;
-  //   console.log(query);
+  //   //console.log(query);
   //   const response = await fetch(
   //     `https://marine-form-backend.herokuapp.com/admin/form/${query}`,
   //     {
@@ -28,9 +28,9 @@ function EditPage() {
   //     }
   //   );
   //   const parseRes = await response.json();
-  //   console.log("cowwww");
-  //   console.log("i was here", parseRes.kin_array);
-  //   console.log(parseRes, "after death");
+  //   //console.log("cowwww");
+  //   //console.log("i was here", parseRes.kin_array);
+  //   //console.log(parseRes, "after death");
   //   setInputs(parseRes);
   //   setLoading(false);
   // };
@@ -52,7 +52,7 @@ function EditPage() {
   //   );
 
   //   const parseRes = await response.json();
-  //   console.log(parseRes);
+  //   //console.log(parseRes);
   // };
 
   // const setParams = () => {
@@ -65,7 +65,7 @@ function EditPage() {
   useEffect(() => {
  
     const query = searchParams.get("q");
-    console.log(query, "here");
+    //console.log(query, "here");
     localStorage.setItem("marine_form_id", query);
     // searchParams.delete("q");
     

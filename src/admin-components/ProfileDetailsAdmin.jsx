@@ -18,7 +18,7 @@ const ProfileDetailsAdmin = ({ setInputs, inputs }) => {
   // });
   const getDetails = async () => {
     const query = localStorage.marine_form_id;
-    console.log(query);
+    //console.log(query);
     const response = await fetch(
       `https://marine-form-backend.herokuapp.com/admin/form/${query}`,
       {
@@ -50,13 +50,13 @@ const ProfileDetailsAdmin = ({ setInputs, inputs }) => {
     );
 
     const parseRes = await response.json();
-    console.log(parseRes);
+    //console.log(parseRes);
   };
 
   useEffect(() => {
     getDetails();
   }, []);
-    console.log(inputs);
+    //console.log(inputs);
   return loading ? (
     <div>Loading</div>
   ) : (
