@@ -62,7 +62,13 @@ function App() {
         crime_convicted: "No",
         ship_accident: "No",
         certificate_suspended: "No",
-        may_approach_employer: "No"
+        may_approach_employer: "No",
+        health_affected_by_climate: "No",
+        defect_in_speech: "No",
+        defect_in_vision:"No",
+        defect_in_hearing: "No",
+        any_major_surgery: "No",
+        applied_before: "No"
     });
     const [inputs1, setInputs1] = useState({
         kin_array: [],
@@ -82,7 +88,13 @@ function App() {
         crime_convicted: "No",
         ship_accident: "No",
         certificate_suspended: "No",
-        may_approach_employer: "No"
+        may_approach_employer: "No",
+        health_affected_by_climate: "No",
+        defect_in_speech: "No",
+        defect_in_vision: "No",
+        defect_in_hearing: "No",
+        any_major_surgery: "No",
+        applied_before: "No"
           
     });
     return (

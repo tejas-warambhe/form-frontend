@@ -55,7 +55,7 @@ const Declaration = ({ inputs, setInputs }) => {
       body: JSON.stringify(inputs),
     });
     const parseRes = await response.json();
-    //console.log(parseRes);
+    console.log(parseRes);
   };
 
   return (

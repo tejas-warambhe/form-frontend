@@ -7,6 +7,7 @@ const PersonalDetails = ({ inputs, setInputs }) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
   let navigate = useNavigate();
+  console.log(inputs);
   return (
     <div className="d-flex ms-3 py-3 flex-row-reverse">
       <Sidebar />
@@ -62,11 +63,14 @@ const PersonalDetails = ({ inputs, setInputs }) => {
           <div class="d-flex row  my-3" style={{ alignItems: "flex-end" }}>
             <div class="col-md-3 ">
               <label>Any major illness / Surgery: </label>
-              <input
+              <select
                 value={inputs.any_major_surgery}
                 name="any_major_surgery"
                 onChange={(e) => onChange(e)}
-              />
+              >
+                <option value="No" selected="selected">No</option>
+                <option value="Yes">Yes</option>
+              </select>
             </div>
             <div class="col-md-3 ">
               <label>If “YES”, kindly provide details separately: </label>
@@ -82,31 +86,40 @@ const PersonalDetails = ({ inputs, setInputs }) => {
               <label for="customer">
                 <h6>Have any defect in hearing:</h6>
               </label>{" "}
-              <input
+              <select
                 value={inputs.defect_in_hearing}
                 name="defect_in_hearing"
                 onChange={(e) => onChange(e)}
-              />
+              >
+                <option value="No" selected="selected">No</option>
+                <option value="Yes">Yes</option>
+              </select>
             </div>
             <div class="col-md-3 ">
               <label for="customer">
                 <h6>Have any defect in vision:</h6>
               </label>{" "}
-              <input
+              <select
                 value={inputs.defect_in_vision}
                 name="defect_in_vision"
                 onChange={(e) => onChange(e)}
-              />
+              >
+                <option value="No" selected="selected">No</option>
+                <option value="Yes">Yes</option>
+              </select>
             </div>
             <div class="col-md-3">
               <label for="customer">
                 <h6>Have any defect in speech:</h6>
               </label>{" "}
-              <input
+              <select
                 value={inputs.defect_in_speech}
                 name="defect_in_speech"
                 onChange={(e) => onChange(e)}
-              />
+              >
+                <option value="No" selected="selected">No</option>
+                <option value="Yes">Yes</option>
+              </select>
             </div>
           </div>
           <div class="d-flex row my-3" style={{ alignItems: "flex-end" }}>
@@ -115,11 +128,14 @@ const PersonalDetails = ({ inputs, setInputs }) => {
                 If your health is affected by any particular climate?
               </label>
               <div>
-                <input
+                <select
                   value={inputs.health_affected_by_climate}
                   name="health_affected_by_climate"
                   onChange={(e) => onChange(e)}
-                />
+                >
+                  <option value="No" selected="selected">No</option>
+                <option value="Yes">Yes</option>
+                </select>
               </div>
             </div>
             <br />

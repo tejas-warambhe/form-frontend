@@ -31,6 +31,18 @@ const AdditionalDetailsAdmin = ({ inputs, setInputs }) => {
                     />
                   </div>
                 </td> */}
+                <select
+                  value={inputs.applied_before}
+                  name="applied_before"
+                  onChange={(e) => onChange(e)}
+                >
+                  <option value="No" selected="selected">
+                    No
+                  </option>
+                  <option value="Yes">
+                    Yes
+                  </option>
+                </select>
               </tr>
               <tr>
                 <td>

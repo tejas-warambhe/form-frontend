@@ -612,6 +612,7 @@ const ProfileDetails = ({ setInputs, inputs }) => {
                         <option value="Married">Married</option>
                         <option value="Unmarried">Unmarried</option>
                         <option value="Divorced">Divorced</option>
+                        <option value="Widow">Widow</option>
                       </select>
                     </div>
                     <div class="form-group col-md-4 input-padding">
