@@ -86,7 +86,7 @@ const NextOfKinsAdmin = ({ inputs, setInputs }) => {
                     <input />
                   </div> */}
                   <div class="form-group col-md-3 input-padding">
-                    <label for="inputname">Name</label>
+                    <label for="inputname">Name of wife</label>
                     <input 
                       value={inputs.name_of_kin}
                       onChange={(e) => onChange(e)}
@@ -97,19 +97,53 @@ const NextOfKinsAdmin = ({ inputs, setInputs }) => {
                   <div class="form-group col-md-3 input-padding">
                     <label for="inputname">Relation</label>
                     <input 
-                      value={inputs.relation}
+                      value="wife"
                       onChange={(e) => onChange(e)}
                       name="relation"
                     />
                   </div>
 
-                  <div class="form-group col-md-3 input-padding">
+                  {/* <div class="form-group col-md-3 input-padding">
                     <label for="inputname">Address </label>
                     <input 
                       value={inputs.add_nkd}
                       onChange={(e) => onChange(e)}
                       name="add_nkd"
                     />
+                  </div> */}
+                </div>
+                <div className="row">
+                <div class="form-group col-md-3 input-padding">
+                      <label for="inputname">Name </label>
+                      <input 
+                        value={inputs.name_of_kin}
+                        onChange={(e) => onChange(e)}
+                        name="name_of_kin"
+                      />
+                  </div>
+                  <div class="form-group col-md-3 input-padding">
+                      <label for="inputname">Relation</label>
+                      <input 
+                        value={inputs.name_of_kin}
+                        onChange={(e) => onChange(e)}
+                        name="name_of_kin"
+                      />
+                  </div>
+                  <div class="form-group col-md-3 input-padding">
+                      <label for="inputname">Address</label>
+                      <input 
+                        value={inputs.name_of_kin}
+                        onChange={(e) => onChange(e)}
+                        name="name_of_kin"
+                      />
+                  </div>
+                  <div class="form-group col-md-3 input-padding">
+                      <label for="inputname">No of childrens</label>
+                      <input 
+                        value={inputs.name_of_kin}
+                        onChange={(e) => onChange(e)}
+                        name="name_of_kin"
+                      />
                   </div>
                 </div>
 

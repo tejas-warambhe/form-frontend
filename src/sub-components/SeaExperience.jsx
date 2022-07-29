@@ -73,7 +73,8 @@ const SeaExperience = ({ inputs, setInputs }) => {
                   <tr class="table-info ">
                     <th class="text-center ">Employer</th>
                     <th class="text-center ">RPSL Agent</th>
-                    <th class="text-center ">Vessel NAME & Type</th>
+                    <th class="text-center ">Vessel NAME </th>
+                    <th class="text-center "> Type</th>
                     <th class="text-center ">Steam /Motor</th>
                     <th class="text-center ">DWT/GRT</th>
                     <th class="text-center ">RANK</th>
@@ -116,6 +117,16 @@ const SeaExperience = ({ inputs, setInputs }) => {
                       />
                     </td>
                     <td>
+                      <input
+                        type="text "
+                        name="type"
+                        // value=""
+
+                        onChange={(e) => onFormChange(e)}
+                        class="form-control "
+                      />
+                    </td>
+                    <td>
                       <select
                         class="form-control "
                         name="steam_motor"
@@ -139,13 +150,24 @@ const SeaExperience = ({ inputs, setInputs }) => {
                       />
                     </td>
                     <td>
-                      <input
-                        type="text "
-                        name="RANK"
+                    <select
                         class="form-control "
+                        name="RANK"
+                        id=" "
                         value={formInputs.RANK}
                         onChange={(e) => onFormChange(e)}
-                      />
+                      >
+                        <option value=" "></option>
+                        <option value="steam ">Cadet/Trainee</option>
+                        <option value="motor ">Second Office</option>
+                        <option value="motor ">Third Office</option>
+                        <option value="motor ">Chief Officer</option>
+                        <option value="motor ">Master</option>
+                        <option value="motor ">Second Engineer</option>
+                        <option value="motor ">Third Engineer</option>
+                        <option value="motor ">Fourth Engineer</option>
+                        <option value="motor ">Chief Engineer</option>
+                      </select>
                     </td>
                     <td>
                       <input
@@ -231,7 +253,8 @@ const SeaExperience = ({ inputs, setInputs }) => {
               <div class="row align-items-center">
                 <div class="col">Employer</div>
                 <div class="col">RPSL Agent</div>
-                <div class="col">Vessel NAME & Type</div>
+                <div class="col">Vessel NAME </div>
+                <div class="col">Type</div>
                 <div class="col">Steam /Motor</div>
                 <div class="col">DWT/GRT</div>
                 <div class="col">RANK</div>
@@ -249,6 +272,7 @@ const SeaExperience = ({ inputs, setInputs }) => {
                     <div class="col">{ele.Employer}</div>
                     <div class="col">{ele.RPSL}</div>
                     <div class="col">{ele.vessel_name}</div>
+                    <div class="col">{ele.vessel_type}</div>
                     <div class="col">{ele.steam_motor}</div>
                     <div class="col">{ele.DWT}</div>
                     <div class="col">{ele.RANK}</div>
