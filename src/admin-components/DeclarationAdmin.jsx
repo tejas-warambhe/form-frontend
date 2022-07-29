@@ -62,7 +62,7 @@ const DeclarationAdmin = ({ inputs, setInputs }) => {
     );
 
     const parseRes = await response.json();
-    //console.log(parseRes);
+    console.log(parseRes);
   };
 
   return (

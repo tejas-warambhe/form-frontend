@@ -73,16 +73,16 @@ const NextofKeens = ({ inputs, setInputs }) => {
                   <div class="form-group col-md-3 input-padding">
                     <label for="inputname">Name of Wife</label>
                     <input 
-                      value={inputs.name_of_kin}
+                      value={inputs.name_of_wife}
                       onChange={(e) => onChange(e)}
-                      name="name_of_kin"
+                      name="name_of_wife"
                     />
                   </div>
 
                   <div class="form-group col-md-3 input-padding">
                     <label for="inputname">Relation</label>
                     <input 
-                      value="wife"
+                      value="Wife"
                       // onChange={(e) => onChange(e)}
                       name="relation"
                     />
@@ -109,25 +109,25 @@ const NextofKeens = ({ inputs, setInputs }) => {
                   <div class="form-group col-md-3 input-padding">
                       <label for="inputname">Relation</label>
                       <input 
-                        value={inputs.name_of_kin}
+                        value={inputs.relation}
                         onChange={(e) => onChange(e)}
-                        name="name_of_kin"
+                        name="relation"
                       />
                   </div>
                   <div class="form-group col-md-3 input-padding">
                       <label for="inputname">Address</label>
                       <input 
-                        value={inputs.name_of_kin}
+                        value={inputs.add_nkd}
                         onChange={(e) => onChange(e)}
-                        name="name_of_kin"
+                        name="add_nkd"
                       />
                   </div>
                   <div class="form-group col-md-3 input-padding">
                       <label for="inputname">No of childrens</label>
                       <input 
-                        value={inputs.name_of_kin}
+                        value={inputs.no_of_child}
                         onChange={(e) => onChange(e)}
-                        name="name_of_kin"
+                        name="no_of_child"
                       />
                   </div>
                 </div>

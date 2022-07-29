@@ -119,8 +119,8 @@ const SeaExperience = ({ inputs, setInputs }) => {
                     <td>
                       <input
                         type="text "
-                        name="type"
-                        // value=""
+                        name="vessel_type"
+                        value={formInputs.vessel_type}
 
                         onChange={(e) => onFormChange(e)}
                         class="form-control "
@@ -151,22 +151,22 @@ const SeaExperience = ({ inputs, setInputs }) => {
                     </td>
                     <td>
                     <select
-                        class="form-control "
+                        class="form-control"
                         name="RANK"
                         id=" "
                         value={formInputs.RANK}
                         onChange={(e) => onFormChange(e)}
                       >
                         <option value=" "></option>
-                        <option value="steam ">Cadet/Trainee</option>
-                        <option value="motor ">Second Office</option>
-                        <option value="motor ">Third Office</option>
-                        <option value="motor ">Chief Officer</option>
-                        <option value="motor ">Master</option>
-                        <option value="motor ">Second Engineer</option>
-                        <option value="motor ">Third Engineer</option>
-                        <option value="motor ">Fourth Engineer</option>
-                        <option value="motor ">Chief Engineer</option>
+                        <option value="Cadet/Trainee">Cadet/Trainee</option>
+                        <option value="Second Office">Second Office</option>
+                        <option value="Third Office">Third Office</option>
+                        <option value="Chief Officer">Chief Officer</option>
+                        <option value="Master">Master</option>
+                        <option value="Second Engineer">Second Engineer</option>
+                        <option value="Third Engineer">Third Engineer</option>
+                        <option value="Fourth Engineer">Fourth Engineer</option>
+                        <option value="Chief Engineer">Chief Engineer</option>
                       </select>
                     </td>
                     <td>
@@ -264,6 +264,7 @@ const SeaExperience = ({ inputs, setInputs }) => {
                 <div class="col">FROM</div>
                 <div class="col">TO</div>
                 <div class="col">TOTAL</div>
+                <div class="col"> Delete ?</div>
               </div>
               <hr />
               {curArr.map((ele, key) => {

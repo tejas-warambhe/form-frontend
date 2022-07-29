@@ -86,19 +86,19 @@ const NextOfKinsAdmin = ({ inputs, setInputs }) => {
                     <input />
                   </div> */}
                   <div class="form-group col-md-3 input-padding">
-                    <label for="inputname">Name of wife</label>
+                    <label for="inputname">Name of Wife</label>
                     <input 
-                      value={inputs.name_of_kin}
+                      value={inputs.name_of_wife}
                       onChange={(e) => onChange(e)}
-                      name="name_of_kin"
+                      name="name_of_wife"
                     />
                   </div>
 
                   <div class="form-group col-md-3 input-padding">
                     <label for="inputname">Relation</label>
                     <input 
-                      value="wife"
-                      onChange={(e) => onChange(e)}
+                      value="Wife"
+                      // onChange={(e) => onChange(e)}
                       name="relation"
                     />
                   </div>
@@ -112,8 +112,8 @@ const NextOfKinsAdmin = ({ inputs, setInputs }) => {
                     />
                   </div> */}
                 </div>
-                <div className="row">
-                <div class="form-group col-md-3 input-padding">
+                <div class="row">
+                  <div class="form-group col-md-3 input-padding">
                       <label for="inputname">Name </label>
                       <input 
                         value={inputs.name_of_kin}
@@ -124,25 +124,25 @@ const NextOfKinsAdmin = ({ inputs, setInputs }) => {
                   <div class="form-group col-md-3 input-padding">
                       <label for="inputname">Relation</label>
                       <input 
-                        value={inputs.name_of_kin}
+                        value={inputs.relation}
                         onChange={(e) => onChange(e)}
-                        name="name_of_kin"
+                        name="relation"
                       />
                   </div>
                   <div class="form-group col-md-3 input-padding">
                       <label for="inputname">Address</label>
                       <input 
-                        value={inputs.name_of_kin}
+                        value={inputs.add_nkd}
                         onChange={(e) => onChange(e)}
-                        name="name_of_kin"
+                        name="add_nkd"
                       />
                   </div>
                   <div class="form-group col-md-3 input-padding">
                       <label for="inputname">No of childrens</label>
                       <input 
-                        value={inputs.name_of_kin}
+                        value={inputs.no_of_child}
                         onChange={(e) => onChange(e)}
-                        name="name_of_kin"
+                        name="no_of_child"
                       />
                   </div>
                 </div>
