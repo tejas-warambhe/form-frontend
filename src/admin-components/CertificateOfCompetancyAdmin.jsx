@@ -31,7 +31,7 @@ const CertificateOfCompetancyAdmin = ({ inputs, setInputs }) => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  {/* <tr>
                     <th>INDIAN</th>
                     <td>
                       <input
@@ -78,7 +78,7 @@ const CertificateOfCompetancyAdmin = ({ inputs, setInputs }) => {
                         onChange={(e) => onChange(e)}
                       />
                     </td>
-                  </tr>
+                  </tr> */}
                   <tr>
                     <th>UK</th>
                     <td>
@@ -228,7 +228,7 @@ const CertificateOfCompetancyAdmin = ({ inputs, setInputs }) => {
                       />
                     </td>
                   </tr>
-                  <tr>
+                  {/* <tr>
                     <th>PANAMA</th>
                     <td>
                       <input
@@ -280,7 +280,7 @@ const CertificateOfCompetancyAdmin = ({ inputs, setInputs }) => {
                         onChange={(e) => onChange(e)}
                       />
                     </td>
-                  </tr>
+                  </tr> */}
                   <tr>
                     <th>OTHERS</th>
                     <td>

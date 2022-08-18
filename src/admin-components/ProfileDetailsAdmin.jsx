@@ -642,6 +642,23 @@ const ProfileDetailsAdmin = ({ setInputs, inputs }) => {
                         <option value="Widow">Widow</option>
                       </select>
                     </div>
+                    <div class="form-group col-md-2 input-padding">
+                    <label for="inputname">Name of Wife</label>
+                    <input 
+                      value={inputs.name_of_wife}
+                      onChange={(e) => onChange(e)}
+                      name="name_of_wife"
+                    />
+                  </div>
+
+                  <div class="form-group col-md-3 input-padding">
+                    <label for="inputname">Relation</label>
+                    <input 
+                      value="Wife"
+                      // onChange={(e) => onChange(e)}
+                      name="relation"
+                    />
+                  </div>
                     <div class="form-group col-md-4 input-padding">
                       <label for="married">Smoker</label>
                       <select

@@ -85,23 +85,7 @@ const NextOfKinsAdmin = ({ inputs, setInputs }) => {
                     <label for="inputname">Add NKD</label>
                     <input />
                   </div> */}
-                  <div class="form-group col-md-3 input-padding">
-                    <label for="inputname">Name of Wife</label>
-                    <input 
-                      value={inputs.name_of_wife}
-                      onChange={(e) => onChange(e)}
-                      name="name_of_wife"
-                    />
-                  </div>
-
-                  <div class="form-group col-md-3 input-padding">
-                    <label for="inputname">Relation</label>
-                    <input 
-                      value="Wife"
-                      // onChange={(e) => onChange(e)}
-                      name="relation"
-                    />
-                  </div>
+                  
 
                   {/* <div class="form-group col-md-3 input-padding">
                     <label for="inputname">Address </label>
