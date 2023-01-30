@@ -28,7 +28,7 @@ const Navbar = () => {
                     <li className="nav-btn"><a className="navigation-link" href="https://nauticalglobal.com/contact.html">Contact</a></li>
                     {/* {% if user.is_authenticated %} */}
                     <li className="btn btn-link nav-btn" style={{ padding: "10px" }}>
-                   <a className="navigation-link" href="http://hrithik2acc.pythonanywhere.com/admin_form">Admin</a>
+                   <a className="navigation-link" href="http://127.0.0.1:8000/">Admin</a>
                         {/* <Link className="navigation-link" to="/admin">Admin Panel</Link> */}
                         {/* http://hrithik2acc.pythonanywhere.com/admin_form */}
 
